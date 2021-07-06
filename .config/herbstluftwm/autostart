@@ -1,0 +1,9 @@
+#!/run/current-system/sw/bin/bash
+
+nitrogen --restore &
+# dunst &
+
+~/.config/herbstluftwm/configs/theme
+~/.config/herbstluftwm/configs/keybinds
+~/.config/herbstluftwm/configs/setup
+~/.config/polybar/launch.sh --forest
