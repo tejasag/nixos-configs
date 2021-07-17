@@ -9,6 +9,13 @@
   home.username = "tejasagarwal";
   home.homeDirectory = "/home/tejasagarwal";
 
+  imports = [
+    ./programs/neovim.nix
+    ./programs/fish.nix
+    ./programs/git.nix
+    ./programs/kitty.nix
+  ];
+
   home.packages = with pkgs; [
     git             # version control system
     kitty           # terminal
@@ -29,28 +36,37 @@
     wirelesstools   # Wireless CLI utilities
     htop            # System monitor
     starship        # shell prompt
+    discord-canary  # Discord chat app
+    slack           # slack chat app
+    zoom-us         # Instant meeting app
+    killall         # *cough* killall $PERSON_READING *cough*
+    spotify         # Music Player
+    blender         # 3D Editing software
+    gnome.cheese    # Camera app
+    insomnia        # REST Client
+    ngrok           # proxy tunnel
+    discord         # Chat app
+    emacs           # Eslip interpreter
+    ripgrep         # Recursive file searcher
+    coreutils       # basic GNU utilities
+    fd              # Faster `find` alternative
+    clang           # I am C-peed xD 
+    rustc           # Rust lang compiler
+    cargo           # Rust lang package manager
+    vscode          # Text Editor
+    cmake           # Makefile generator
+    libtool         # a generic library support script
+    pavucontrol     # audio controller
+    spotify-tui     # terminal user interface for spotify
+    bat             # cat replacement 
+
+    jetbrains.clion    # C/C++ editor by jetbrains
+    jetbrains.webstorm # JavaScript editor by jetbrains
+    jetbrains.goland   # Golang editor by jetbrains
   ];
 
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    extraConfig = "colorscheme gruvbox";
-    plugins = with pkgs.vimPlugins; [
-      vim-nix
-      gruvbox
-    ];
-  };
 
-  programs.git = {
-    enable = true;
-    userName = "Tejas Agarwal";
-    userEmail = "tejasagarwalbly@gmail.com";
-    extraConfig = {
-      init = {
-       defaultBranch = "main";
-      };
-    };
-  };
+  
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
