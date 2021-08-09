@@ -16,6 +16,7 @@
       ./components/printing.nix
       ./components/time.nix
       ./components/xserver.nix
+   #   ./components/android-studio.nix
     ];
 
   environment.systemPackages = with pkgs; [
@@ -24,6 +25,8 @@
     firefox
     git
     brave
+    glibc
+    androidSdk
   ];
 
 

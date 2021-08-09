@@ -23,7 +23,6 @@
     vim             # terminal editor
     notepadqq       # gui editor 
     firefox         # browser
-    pcmanfm         # file browser
     herbstluftwm    # window manager
     nitrogen        # wallpaper dameon
     polybar         # system tray
@@ -46,11 +45,11 @@
     insomnia        # REST Client
     ngrok           # proxy tunnel
     discord         # Chat app
-    emacs           # Eslip interpreter
     ripgrep         # Recursive file searcher
     coreutils       # basic GNU utilities
     fd              # Faster `find` alternative
     clang           # I am C-peed xD 
+    clang-tools     # tools.
     rustc           # Rust lang compiler
     cargo           # Rust lang package manager
     vscode          # Text Editor
@@ -59,14 +58,28 @@
     pavucontrol     # audio controller
     spotify-tui     # terminal user interface for spotify
     bat             # cat replacement 
-
     jetbrains.clion    # C/C++ editor by jetbrains
     jetbrains.webstorm # JavaScript editor by jetbrains
     jetbrains.goland   # Golang editor by jetbrains
+    jetbrains.idea-ultimate 
+    minecraft       # Minecraft. yes.
+    multimc         # modded minecraft thingy
+    jdk8
+    obs-studio
+    arduino
+    libvterm
+    postman
+    gnutls
+    mu
+    isync
+    niv
   ];
 
 
-  
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: with epkgs; [ vterm ];
+  }; 
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

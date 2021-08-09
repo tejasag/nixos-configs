@@ -1,1 +1,1 @@
-# Temp NixOS and Nix config
+# [tejasag](https://github.com/tejasag)'s NixOS config
