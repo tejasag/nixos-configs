@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+ unstable = import <nixpkgs-unstable> {};
+in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -14,16 +17,22 @@
     ./programs/fish.nix
     ./programs/git.nix
     ./programs/kitty.nix
+    ./programs/starship.nix
+    ./programs/emacs.nix
+    ./programs/direnv.nix
+
+  #  ./wm/herbstluftwm.nix
+  #  ./wm/xmonad.nix
   ];
 
   home.packages = with pkgs; [
     git             # version control system
     kitty           # terminal
+    herbstluftwm
     fish            # shell
     vim             # terminal editor
     notepadqq       # gui editor 
     firefox         # browser
-    herbstluftwm    # window manager
     nitrogen        # wallpaper dameon
     polybar         # system tray
     picom           # compositor
@@ -34,7 +43,6 @@
     flameshot       # screenshot utility
     wirelesstools   # Wireless CLI utilities
     htop            # System monitor
-    starship        # shell prompt
     discord-canary  # Discord chat app
     slack           # slack chat app
     zoom-us         # Instant meeting app
@@ -42,6 +50,7 @@
     spotify         # Music Player
     blender         # 3D Editing software
     gnome.cheese    # Camera app
+    gnome.gnome-bluetooth
     insomnia        # REST Client
     ngrok           # proxy tunnel
     discord         # Chat app
@@ -50,8 +59,6 @@
     fd              # Faster `find` alternative
     clang           # I am C-peed xD 
     clang-tools     # tools.
-    rustc           # Rust lang compiler
-    cargo           # Rust lang package manager
     vscode          # Text Editor
     cmake           # Makefile generator
     libtool         # a generic library support script
@@ -64,7 +71,6 @@
     jetbrains.idea-ultimate 
     minecraft       # Minecraft. yes.
     multimc         # modded minecraft thingy
-    jdk8
     obs-studio
     arduino
     libvterm
@@ -73,13 +79,14 @@
     mu
     isync
     niv
+    vlc
+    wget
+    imagemagick    
+    minecraft-server
+    blueman
+    jdk
   ];
 
-
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: with epkgs; [ vterm ];
-  }; 
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

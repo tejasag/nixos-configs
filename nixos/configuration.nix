@@ -20,17 +20,17 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    vim     
-    wget
-    firefox
-    git
     brave
-    glibc
-    androidSdk
-  ];
 
+    (pkgs.writeShellScriptBin "nixFlakes" ''
+      exec ${pkgs.nixUnstable}/bin/nix --experimental-features "nix-command flakes" "$@"
+    '')
+  ];
+ 
+  nix.extraOptions = ''
+	keep-outputs = true
+	keep-derivations = true
+  '';
 
   system.stateVersion = "21.05"; 
-
 }
-

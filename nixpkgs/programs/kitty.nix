@@ -13,6 +13,7 @@
       shell = "fish";
       cursor_shape = "beam";
       tab_bar_style = "powerline";
+      background_opacity = "0.95";
 
       active_border_color = "#BD93F9";
       window_padding_width = 5;
