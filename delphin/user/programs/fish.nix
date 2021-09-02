@@ -9,7 +9,8 @@
       nix-fish = "nix-shell --command 'fish'";
     };
     shellInit = ''
-      set -x DIRENV_LOG_LEVEL ""
+      set -x DIRENV_LOG_FORMAT ""
+      set -x DOOMDIR "~/.dotfiles/.doom.d"
     '';
   };
 }
