@@ -11,7 +11,7 @@
 
     settings = {
       shell = "fish";
-      cursor_shape = "beam";
+     # cursor_shape = "beam";
       tab_bar_style = "powerline";
       background_opacity = "0.95";
 

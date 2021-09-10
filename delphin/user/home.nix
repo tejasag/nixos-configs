@@ -17,6 +17,7 @@
     ./programs/starship.nix
     ./programs/emacs.nix
     ./programs/direnv.nix
+    ./programs/steam.nix
 
   #  ./wm/herbstluftwm.nix
   #  ./wm/xmonad.nix
