@@ -165,16 +165,7 @@ hc keybind $Mod-Ctrl-Print spawn flameshot gui
 
 # applications
 hc keybind $Mod-1 spawn discord
-hc keybind $Mod-2 spawn qutebrowser
-hc keybind $Mod-3 spawn "${TERMINAL:-xterm}" -e 'ranger'
-hc keybind $Mod-4 spawn "${TERMINAL:-xterm}" -e 'gotop'
-hc keybind $Mod-5 spawn "${TERMINAL:-xterm}" -e 'ncmpcpp'
-
-hc keybind $Mod-n spawn notion-app-nativefier
 
 hc keybind $Mod-Ctrl-p spawn pavucontrol
 
 hc keybind $Mod-e spawn emacs
-
-# EWW launcher
-hc keybind $Mod-Shift-d spawn ~/.config/herbstluftwm/scripts/launcher
