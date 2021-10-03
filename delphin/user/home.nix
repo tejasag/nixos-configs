@@ -83,7 +83,7 @@
     minecraft-server
     blueman
     jdk
-    steam
+    tmux
   ];
 
 
