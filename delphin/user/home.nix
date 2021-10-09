@@ -1,11 +1,14 @@
+#   ______  ______    
+#  /\__  _\/\  __ \     
+#  \/_/\ \/\ \  __ \    By Tejas Agarwal 
+#     \ \_\ \ \_\ \_\   https://github.com/tejasag 
+#      \/_/  \/_/\/_/ 
+#                     
+
 { config, pkgs, ... }:
 
 {
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home.username = "tejasagarwal";
   home.homeDirectory = "/home/tejasagarwal";
 
@@ -17,83 +20,71 @@
     ./programs/starship.nix
     ./programs/emacs.nix
     ./programs/direnv.nix
-  #  ./programs/steam.nix
 
   #  ./wm/herbstluftwm.nix
   #  ./wm/xmonad.nix
   ];
 
   home.packages = with pkgs; [
+
+    # Util 
     git             # version control system
+    wirelesstools   # Wireless CLI utilities
     kitty           # terminal
-    herbstluftwm
-    fish            # shell
-    vim             # terminal editor
-    notepadqq       # gui editor 
+    flameshot       # screenshot utility
+    gnutls          # GNU transport layer security lib
+    neofetch        # CLI to show system information
+    htop            # System monitor
+    fish            # <shell><
+    killall         # *cough* killall $PERSON_READING *cough*
+    ripgrep         # Recursive file searcher
+    coreutils       # basic GNU utilities
+    fd              # Faster `find` alternative
+    cmake           # Makefile generator
+    libtool         # a generic library support script
+    gnome.gnome-bluetooth # bluetooth manager for gnome
+    pavucontrol     # audio controller
+    bat             # cat replacement 
+    niv             # nix dep manager
+    wget            # HTTP retriever
+    blueman         # bluetooth manager
+    natls           # better ls
+
+    # Misc
+    ngrok           # proxy tunnel
     firefox         # browser
+    brave           # browser
+    slack           # slack chat app
+    zoom-us         # Instant meeting app
+    spotify         # Music Player
+    blender         # 3D Editing software
+    gnome.cheese    # Camera app
+    insomnia        # REST Client
+    discord         # Chat app
+    clang           # I am C-peed xD 
+    clang-tools     # tools.
+    minecraft       # Minecraft. yes.
+    obs-studio      # Recording software
+    arduino         # arduino.
+    libvterm        # terminal emulator
+    vlc             # media player
+    imagemagick     # bitmap images editor
+    jdk             # java development kit ._.
+
+    # Display
+    herbstluftwm
     nitrogen        # wallpaper dameon
     polybar         # system tray
     picom           # compositor
     dmenu           # application launcher
     rofi            # application launcher
     dunst           # notifcation daemon
-    neofetch        # CLI to show system information
-    flameshot       # screenshot utility
-    wirelesstools   # Wireless CLI utilities
-    htop            # System monitor
-    discord-canary  # Discord chat app
-    slack           # slack chat app
-    zoom-us         # Instant meeting app
-    killall         # *cough* killall $PERSON_READING *cough*
-    spotify         # Music Player
-    blender         # 3D Editing software
-    gnome.cheese    # Camera app
-    gnome.gnome-bluetooth
-    insomnia        # REST Client
-    ngrok           # proxy tunnel
-    discord         # Chat app
-    ripgrep         # Recursive file searcher
-    coreutils       # basic GNU utilities
-    fd              # Faster `find` alternative
-    clang           # I am C-peed xD 
-    clang-tools     # tools.
+
+    # Editors & more
+    vim             # terminal editor
+    notepadqq       # gui editor 
     vscode          # Text Editor
-    cmake           # Makefile generator
-    libtool         # a generic library support script
-    pavucontrol     # audio controller
-    spotify-tui     # terminal user interface for spotify
-    bat             # cat replacement 
-    jetbrains.clion    # C/C++ editor by jetbrains
-    jetbrains.webstorm # JavaScript editor by jetbrains
-    jetbrains.goland   # Golang editor by jetbrains
-    jetbrains.idea-ultimate 
-    minecraft       # Minecraft. yes.
-    multimc         # modded minecraft thingy
-    obs-studio
-    arduino
-    libvterm
-    postman
-    gnutls
-    mu
-    isync
-    niv
-    vlc
-    wget
-    imagemagick    
-    minecraft-server
-    blueman
-    jdk
-    tmux
+    tmux            # terminal multiplexer 
+
   ];
-
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
- #  home.stateVersion = "21.05";
 }

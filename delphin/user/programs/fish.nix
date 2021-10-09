@@ -1,3 +1,9 @@
+#   ______  ______    
+#  /\__  _\/\  __ \     
+#  \/_/\ \/\ \  __ \    By Tejas Agarwal 
+#     \ \_\ \ \_\ \_\   https://github.com/tejasag 
+#      \/_/  \/_/\/_/ 
+#                     
 { ... }:
 
 {
@@ -5,7 +11,6 @@
     enable = true;
     shellAliases = {
       lx = "natls -lgm";
-      cax = "bat";
       nix-fish = "nix-shell --command 'fish'";
     };
     shellInit = ''

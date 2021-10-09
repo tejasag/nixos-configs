@@ -1,3 +1,9 @@
+#   ______  ______    
+#  /\__  _\/\  __ \     
+#  \/_/\ \/\ \  __ \    By Tejas Agarwal 
+#     \ \_\ \ \_\ \_\   https://github.com/tejasag 
+#      \/_/  \/_/\/_/ 
+#                     
 { ... }:
 
 {
@@ -8,10 +14,10 @@
     desktopManager.gnome.enable = true;
 
     windowManager = {
-	herbstluftwm = {
-	  enable = true;
-	  configFile = ../../.config/herbstluftwm/autostart;
-	};
+      herbstluftwm = {
+        enable = true;
+        configFile = ../../config/herbstluftwm/autostart;
+      };
     };
 
     layout = "us";

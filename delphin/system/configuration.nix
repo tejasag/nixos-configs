@@ -16,25 +16,22 @@
       ./components/printing.nix
       ./components/time.nix
       ./components/xserver.nix
-   #   ./components/android-studio.nix
     ];
 
-  # Setup Nix Flakes
-  nix.package = pkgs.nixFlakes;
-
-  environment.systemPackages = with pkgs; [
-    brave
-
-#    (pkgs.writeShellScriptBin "nixFlakes" ''
-#      exec ${pkgs.nixUnstable}/bin/nix --experimental-features "nix-command flakes" "$@"
-#    '')
-  ];
- 
-  nix.extraOptions = ''
-	keep-outputs = true
-	keep-derivations = true
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+      experimental-features = nix-command flakes
+    '';
+    autoOptimiseStore = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
 
   system.stateVersion = "21.05"; 
 }
