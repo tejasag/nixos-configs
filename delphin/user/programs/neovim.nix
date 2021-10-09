@@ -9,20 +9,57 @@
 {
   programs.neovim = {
     enable = true;
-    vimAlias = true;
+    withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       vim-nix
-      rust-vim
-      haskell-vim
       gruvbox
-      coc-nvim
-      coc-clangd
       nerdtree
       yats-vim
       vim-devicons
       vim-nerdtree-syntax-highlight
       vim-polyglot
     ];
+    coc = {
+      enable = true;
+      settings = {
+        "coc.preferences.formatOnSaveFiletypes" = [
+          "css"
+          "markdown"
+          "javascript"
+          "typescript"
+          "graphql"
+          "javascriptreact"
+          "typescriptreact"
+          "json"
+          "typescript.tsx"
+          "rust"
+          "haskell"
+        ];
+        "rust-client.disableRustup" = true;
+        languageserver = {
+          haskell = {
+            command = "haskell-language-server-wrapper";
+            args = [
+              "--lsp"
+            ];
+            rootPatterns = [
+              ".stack.yaml"
+              ".hie-bios"
+              "BUILD.bazel"
+              "cabal.config"
+              "*.cabal"
+              "cabal.project"
+              "hie.yaml"
+              "package.yaml"
+            ];
+            filetypes= [
+              "hs"
+              "lhs"
+              "haskell"
+            ];
+          };
+        };
+    };
     extraConfig = ''
 colorscheme gruvbox
 let g:gruvbox_transparent_bg = 1
