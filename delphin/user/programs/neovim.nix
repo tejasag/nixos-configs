@@ -59,6 +59,7 @@
             ];
           };
         };
+      };
     };
     extraConfig = ''
 colorscheme gruvbox
