@@ -87,5 +87,7 @@
     vscode          # Text Editor
     tmux            # terminal multiplexer 
 
+    # Fonts
+    iosevka
   ];
 }
