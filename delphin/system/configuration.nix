@@ -32,6 +32,14 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+    binaryCaches = [
+      "https://hackclub.cachix.org",
+      "https://nix-community.cachix.org",
+    ];
+    binaryCachePublicKeys = [
+      "hackclub.cachix.org-1:O2CuNZHdaWuoZw/GIl92H5boypRcgU7QpjrjKo3/AjE=",
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
   };
 
   system.stateVersion = "21.05"; 

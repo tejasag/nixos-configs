@@ -1,31 +1,15 @@
 {
   "nodes": {
-    "flake-utils": {
-      "locked": {
-        "lastModified": 1631561581,
-        "narHash": "sha256-3VQMV5zvxaVLvqqUrNz3iJelLw30mIVSfZmAaauM3dA=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "7e5bf3925f6fbdfaf50a2a7ca0be2879c4261d19",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "hackclub": {
       "inputs": {
-        "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1634318254,
-        "narHash": "sha256-lAP5tgE4VsZwwlotoCMNB4PLNQbQOL36D91viVscXFQ=",
+        "lastModified": 1634320109,
+        "narHash": "sha256-BZlLaG399KZFsJFrNxjf9t/Ag9pXouGPOOZ1lhRbos8=",
         "owner": "hackclub",
         "repo": "nix-overlay",
-        "rev": "2c58c8471d132910d98b53b8aa5e90efcbb6fc1b",
+        "rev": "af98e553e8d9d66ede60d9a6c9080be8043c041c",
         "type": "github"
       },
       "original": {
