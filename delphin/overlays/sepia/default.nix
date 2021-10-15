@@ -2,8 +2,9 @@
 , pkgs
 }:
 
-pkgs.buildGoModule rec  {
+pkgs.buildGoModule rec {
   pname = "sepia";
+  name = "sepia";
 
   src = pkgs.fetchFromGitHub {
     owner = "rishiosaur";
