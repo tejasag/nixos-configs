@@ -16,6 +16,7 @@
       ./components/printing.nix
       ./components/time.nix
       ./components/xserver.nix
+      ./components/fonts.nix
     ];
 
   nix = {
