@@ -20,7 +20,7 @@ pkgs.buildGoModule rec  {
     license = licences.asl20;
     platforms = platforms.linux ++ platforms.darwin;
   };
-};
+}
 
 
 
