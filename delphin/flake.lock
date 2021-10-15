@@ -1,5 +1,39 @@
 {
   "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1631561581,
+        "narHash": "sha256-3VQMV5zvxaVLvqqUrNz3iJelLw30mIVSfZmAaauM3dA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "7e5bf3925f6fbdfaf50a2a7ca0be2879c4261d19",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "hackclub": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1634317775,
+        "narHash": "sha256-/ZVnkuR2rcSszdJRROUpjoUB8xrFYBQ0CSxA86oUr60=",
+        "owner": "hackclub",
+        "repo": "nix-overlay",
+        "rev": "b359fe0d3e1ec485d4b3a1f311ea0f05ff07dc7a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hackclub",
+        "repo": "nix-overlay",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -23,6 +57,20 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1634310966,
+        "narHash": "sha256-SOA4vFd/DwlO+i+ZqwAu8vsrjPylWwHvN1FUiyVCBJA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "cb10e4ddf6d58987e2b2eb41b827984af27ee98e",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1634115022,
         "narHash": "sha256-K9DZMQ47VRrg9gtTPwex5p0E8LnwM/dDkNe7AQW0qj0=",
         "owner": "nixos",
@@ -39,8 +87,9 @@
     },
     "root": {
       "inputs": {
+        "hackclub": "hackclub",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

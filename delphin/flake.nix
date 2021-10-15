@@ -21,7 +21,7 @@
     pkgs = import nixpkgs {
       inherit system;
       config = { allowUnfree = true; }; 
-#      overlay = [hackclub.overlay];
+      overlay = [hackclub.overlay];
     };
 
     lib = nixpkgs.lib; 
