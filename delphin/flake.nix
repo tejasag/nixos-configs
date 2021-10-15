@@ -15,7 +15,7 @@
     hackclub.url = "github:hackclub/nix-overlay";
   };
 
-  outputs = { nixpkgs, home-manager, ... }: 
+  outputs = { nixpkgs, home-manager, hackclub, ... }: 
   let 
     system = "x86_64-linux";
     pkgs = import nixpkgs {
