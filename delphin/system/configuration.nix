@@ -34,7 +34,7 @@
     };
     binaryCaches = [
       "https://hackclub.cachix.org",
-      "https://nix-community.cachix.org",
+      "https://nix-community.cachix.org"
     ];
     binaryCachePublicKeys = [
       "hackclub.cachix.org-1:O2CuNZHdaWuoZw/GIl92H5boypRcgU7QpjrjKo3/AjE=",
