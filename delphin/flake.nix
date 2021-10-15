@@ -16,15 +16,16 @@
   outputs = { nixpkgs, home-manager, ... }: 
   let 
     system = "x86_64-linux";
-
     pkgs = import nixpkgs {
       inherit system;
       config = { allowUnfree = true; }; 
+      overlays = [(import ./overlays)];
     };
 
     lib = nixpkgs.lib; 
 
   in {
+
     homeManagerConfigurations = {
       tejasagarwal = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs; 

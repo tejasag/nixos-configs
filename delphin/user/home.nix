@@ -71,6 +71,7 @@
     imagemagick     # bitmap images editor
     jdk             # java development kit ._.
     virtualbox      # pc emulator
+    sepia
 
     # Display
     herbstluftwm
