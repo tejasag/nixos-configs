@@ -11,6 +11,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
     home-manager.url = "github:nix-community/home-manager/release-21.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    hackclub.url = "github:hackclub/nix-overlay";
   };
 
   outputs = { nixpkgs, home-manager, ... }: 
@@ -19,6 +21,7 @@
     pkgs = import nixpkgs {
       inherit system;
       config = { allowUnfree = true; }; 
+#      overlay = [hackclub.overlay];
     };
 
     lib = nixpkgs.lib; 
