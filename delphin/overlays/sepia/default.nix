@@ -2,7 +2,7 @@
 , pkgs
 }:
 
-pkgs.buildGoModule rec = {
+pkgs.buildGoModule rec  {
   pname = "sepia";
 
   src = pkgs.fetchFromGitHub {
