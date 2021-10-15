@@ -21,11 +21,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1634317775,
-        "narHash": "sha256-/ZVnkuR2rcSszdJRROUpjoUB8xrFYBQ0CSxA86oUr60=",
+        "lastModified": 1634318024,
+        "narHash": "sha256-czemQ//9Mih77EcZBQWz7lx/0TYVemkWQ1K56HxVCT8=",
         "owner": "hackclub",
         "repo": "nix-overlay",
-        "rev": "b359fe0d3e1ec485d4b3a1f311ea0f05ff07dc7a",
+        "rev": "b8b5c006cc631e6526cbc5b41a4bd69bc6043c2f",
         "type": "github"
       },
       "original": {
