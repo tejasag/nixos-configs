@@ -21,13 +21,12 @@
     pkgs = import nixpkgs {
       inherit system;
       config = { allowUnfree = true; }; 
-      overlays = [hackclub.overlay];
+      overlays = [ hackclub.overlay ];
     };
 
     lib = nixpkgs.lib; 
 
   in {
-
     homeManagerConfigurations = {
       tejasagarwal = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs; 
