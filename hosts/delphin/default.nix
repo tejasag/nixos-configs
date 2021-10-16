@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
 
       # Window Manager  
-      ./modules/window-managers/herbstluftwm.nix
+      ../../modules/window-managers/herbstluftwm.nix
     ];
 
   # boot
