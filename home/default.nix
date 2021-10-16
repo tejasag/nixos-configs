@@ -13,13 +13,13 @@
   home.homeDirectory = "/home/tejasagarwal";
 
   imports = [
-    ./programs/neovim.nix
-    ./programs/fish.nix
-    ./programs/git.nix
-    ./programs/kitty.nix
-    ./programs/starship.nix
-    ./programs/emacs.nix
-    ./programs/direnv.nix
+    ../modules/neovim
+    ../modules/fish
+    ../modules/git
+    ../modules/kitty
+    ../modules/starship
+    ../modules/emacs
+    ../modules/direnv
   ];
 
   home.packages = with pkgs; [
