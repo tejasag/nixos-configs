@@ -15,10 +15,11 @@
       ga = "git add";
       gc = "git commit -m $1";
       gp = "git push origin $1";
+      commit = "ga . && gc $1";
     };
     shellInit = ''
       set -x DIRENV_LOG_FORMAT ""
-      set -x DOOMDIR "~/.dotfiles/.doom.d"
+      set -x DOOMDIR "~/.dotfiles/config/doom"
     '';
   };
 }

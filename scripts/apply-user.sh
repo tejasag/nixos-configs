@@ -5,7 +5,7 @@
 #     \ \_\ \ \_\ \_\   https://github.com/tejasag 
 #      \/_/  \/_/\/_/ 
 #                     
-pushd ~/.dotfiles/delphin
+pushd ~/.dotfiles/
 nix build .#homeManagerConfigurations.tejasagarwal.activationPackage
 ./result/activate
 popd

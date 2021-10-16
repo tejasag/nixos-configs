@@ -5,7 +5,7 @@
 #      \/_/  \/_/\/_/ 
 #                     
 {
-  description = "NixOS system configuration for `delphin`";
+  description = "tejasag's nixos-configs";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
@@ -40,9 +40,7 @@
         homeDirectory = "/home/tejasagarwal";
         stateVersion="21.05";
         configuration = {
-          imports = [
-            ./user/home.nix 
-          ];
+          imports = [ ./home ];
         };
       };
     };
@@ -51,9 +49,7 @@
       delphin = lib.nixosSystem {
         inherit system;         
 
-        modules = [
-           ./system/configuration.nix   
-        ];
+        modules = [ ./hosts/delphin/configuration.nix ];
       };        
     };   
   };
