@@ -52,7 +52,7 @@
         configuration = {
           imports = [ ./home/minimal.nix ];
         };
-      }
+      };
     };
 
     nixosConfigurations = {
