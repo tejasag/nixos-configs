@@ -42,6 +42,17 @@
           imports = [ ./home ];
         };
       };
+
+      minimal = home-manager.lib.homeManagerConfiguration {
+        inherit system pkgs;
+
+        username = "tejasagarwal";
+        homeDirectory = "/home/tejasagarwal";
+        stateVersion = "21.05";
+        configuration = {
+          imports = [ ./home/minimal.nix ];
+        };
+      }
     };
 
     nixosConfigurations = {
