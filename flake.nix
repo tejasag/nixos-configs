@@ -9,7 +9,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-21.05";
@@ -19,7 +18,7 @@
     hackclub.url = "github:hackclub/nix-overlay";
   };
 
-  outputs = { nixpkgs, home-manager, unstable, hackclub, ... }: 
+  outputs = { nixpkgs, home-manager, hackclub, ... }: 
   let 
     system = "x86_64-linux";
 
