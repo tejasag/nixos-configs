@@ -7,7 +7,7 @@
 { pkgs, ... }:
 
 {
-  home-manager.users.tejasagarwal.programs.neovim = {
+  programs.neovim = {
     enable = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [

@@ -7,7 +7,7 @@
 { ... }:
 
 {
-  home-manager.users.tejasagarwal.programs.starship = {
+  programs.starship = {
     enable = true;
 
     settings = {

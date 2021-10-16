@@ -7,7 +7,7 @@
 { ... }:
 
 {
-  home-manager.users.tejasagarwal.programs.kitty = {
+  programs.kitty = {
     enable = true;
 
     font = {

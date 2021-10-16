@@ -7,7 +7,7 @@
 { ... }:
 
 {
-  home-manager.users.tejasagarwal.programs.fish = {
+  programs.fish = {
     enable = true;
     shellAliases = {
       lx = "natls -lgm";

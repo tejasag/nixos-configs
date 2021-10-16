@@ -7,7 +7,7 @@
 { ... }:
 
 {
-  home-manager.users.tejasagarwal.programs.emacs = {
+  programs.emacs = {
     enable = true;
     extraPackages = epkgs: with epkgs; [ vterm ];
   };

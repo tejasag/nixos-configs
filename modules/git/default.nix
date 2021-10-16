@@ -7,7 +7,7 @@
 { ... }:
 
 {
-  home-manager.users.tejasagarwal.programs.git = {
+  programs.git = {
     enable = true;
     userName = "Tejas Agarwal";
     userEmail = "tejasagarwalbly@gmail.com";
