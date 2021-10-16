@@ -5,7 +5,7 @@
 #      \/_/  \/_/\/_/ 
 #                     
 {
-  home-manager.users.tejasagarwal.programs.direnv = {
+  programs.direnv = {
     enable = true;
     nix-direnv = {
       enable = true;
