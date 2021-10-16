@@ -4,8 +4,6 @@
 #     \ \_\ \ \_\ \_\   https://github.com/tejasag 
 #      \/_/  \/_/\/_/ 
 #                     
-{ ... }:
-
 {
   home-manager.users.tejasagarwal.programs.direnv = {
     enable = true;
