@@ -36,7 +36,6 @@
     homeManagerConfigurations = {
       tejasagarwal = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs; 
-
         username = "tejasagarwal";
         homeDirectory = "/home/tejasagarwal";
         stateVersion="21.05";
@@ -47,7 +46,6 @@
 
       minimal = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs;
-
         username = "tejasagarwal";
         homeDirectory = "/home/tejasagarwal";
         stateVersion = "21.05";
@@ -60,8 +58,7 @@
     nixosConfigurations = {
       delphin = lib.nixosSystem {
         inherit system;         
-
-        modules = [ ./hosts/delphin/configuration.nix ];
+        modules = [ ./hosts/delphin ];
       };        
     };   
   };
