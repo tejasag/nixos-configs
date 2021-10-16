@@ -13,8 +13,8 @@
   home.homeDirectory = "/home/tejasagarwal";
 
   imports = [
-    ./programs/git.nix
-    ./programs/direnv.nix
+    ../modules/git.nix
+    ../modules/direnv.nix
   ];
 
   home.packages = with pkgs; [
