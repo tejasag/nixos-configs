@@ -48,7 +48,6 @@
     niv             # nix dep manager
     wget            # HTTP retriever
     blueman         # bluetooth manager
-    # natls           # better ls
 
     # Misc
     ngrok           # proxy tunnel
@@ -71,7 +70,6 @@
     imagemagick     # bitmap images editor
     jdk             # java development kit ._.
     virtualbox      # pc emulator
-    sepia
 
     # Display
     herbstluftwm
@@ -87,5 +85,8 @@
     notepadqq       # gui editor 
     vscode          # Text Editor
     tmux            # terminal multiplexer 
+
+    # Hack club
+    sepia           # Mimimalist functional language (@rishiosaur)
   ];
 }

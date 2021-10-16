@@ -9,7 +9,7 @@
 {
   programs.neovim = {
     enable = true;
-#     withNodeJs = true;
+    withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       vim-nix
       gruvbox
