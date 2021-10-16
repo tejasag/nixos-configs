@@ -3,7 +3,7 @@
 nitrogen --restore &
 # dunst &
 
-./configs/theme
-./configs/keybinds
-./configs/setup
+~/.dotfiles/config/herbstluftwm/configs/theme
+~/.dotfiles/config/herbstluftwm/configs/keybinds
+~/.dotfiles/config/herbstluftwm/configs/setup
 ~/.config/polybar/launch.sh --forest

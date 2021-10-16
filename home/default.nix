@@ -20,9 +20,6 @@
     ./programs/starship.nix
     ./programs/emacs.nix
     ./programs/direnv.nix
-
-  #  ./wm/herbstluftwm.nix
-  #  ./wm/xmonad.nix
   ];
 
   home.packages = with pkgs; [

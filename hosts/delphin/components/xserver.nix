@@ -24,7 +24,7 @@
     xkbOptions = "eurosign:e";
 
     libinput = {
-	enable = true;
+	  enable = true;
     };
   };
 }
