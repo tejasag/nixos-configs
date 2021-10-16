@@ -6,4 +6,7 @@ nitrogen --restore &
 ~/.dotfiles/config/herbstluftwm/configs/theme
 ~/.dotfiles/config/herbstluftwm/configs/keybinds
 ~/.dotfiles/config/herbstluftwm/configs/setup
-~/.config/polybar/launch.sh --forest
+
+# Polybar
+polybar -q main -c "~/.dotfiles/config/polybar/config.ini"
+
