@@ -16,7 +16,7 @@
     windowManager = {
       herbstluftwm = {
         enable = true;
-        configFile = ../../config/herbstluftwm/autostart;
+        configFile = ../../../config/herbstluftwm/autostart;
       };
     };
 
