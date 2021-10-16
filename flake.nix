@@ -31,6 +31,8 @@
     lib = nixpkgs.lib; 
   in 
   {
+    devShell.${system} = import ./shell.nix { inherit pkgs; };
+
     homeManagerConfigurations = {
       tejasagarwal = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs; 
