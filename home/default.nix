@@ -45,7 +45,6 @@
     niv             # nix dep manager
     wget            # HTTP retriever
     blueman         # bluetooth manager
-    natls
 
     # Misc
     ngrok           # proxy tunnel
