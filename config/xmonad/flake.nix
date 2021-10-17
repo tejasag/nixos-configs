@@ -18,7 +18,7 @@
       overlays = [ 
         xmonad.overlay 
         xmonad-contrib.overlay 
-        (import ../../overlays)
+  #      (import ../../overlays)
       ];
     in flake-utils.lib.eachDefaultSystem (system:
       let
