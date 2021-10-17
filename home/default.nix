@@ -85,8 +85,6 @@
 
     # WMs & related
     herbstluftwm    
-    haskellPackages.xmonad
-    haskellPackages.xmonad-tejasag
 
     # Hack club
     # sepia           # Mimimalist functional language (@rishiosaur)
