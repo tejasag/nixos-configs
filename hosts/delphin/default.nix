@@ -7,6 +7,7 @@
 
       # Window Manager  
       ../../modules/window-managers/herbstluftwm.nix
+      ../../modules/window-managers/xmonad.nix
     ];
 
   # boot
