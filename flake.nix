@@ -1,9 +1,9 @@
-#   ______  ______    
-#  /\__  _\/\  __ \     
-#  \/_/\ \/\ \  __ \    By Tejas Agarwal 
-#     \ \_\ \ \_\ \_\   https://github.com/tejasag 
-#      \/_/  \/_/\/_/ 
-#                     
+#   ______  ______
+#  /\__  _\/\  __ \
+#  \/_/\ \/\ \  __ \    By Tejas Agarwal
+#     \ \_\ \ \_\ \_\   https://github.com/tejasag
+#      \/_/  \/_/\/_/
+#
 {
   description = "tejasag's nixos-configs";
 
@@ -22,55 +22,50 @@
     xmonad-contrib.url = "github:xmonad/xmonad-contrib";
   };
 
-  outputs = { nixpkgs, home-manager,  nur, xmobar, xmonad, xmonad-contrib, ... }: 
-  let 
-    system = "x86_64-linux";
+  outputs = { nixpkgs, home-manager, nur, xmobar, xmonad, xmonad-contrib, ... }:
+    let
+      system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config = { allowUnfree = true; }; # sorry Stallman onii-san
-      overlays = [ 
-        # hackclub.overlay
-        nur.overlay
-        xmobar.overlay
-        xmonad.overlay
-        xmonad-contrib.overlay
-        (import ./overlays)
-      ];
-    };
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; }; # sorry Stallman onii-san
+        overlays = [
+          # hackclub.overlay
+          nur.overlay
+          xmobar.overlay
+          xmonad.overlay
+          xmonad-contrib.overlay
+          (import ./overlays)
+        ];
+      };
 
-    lib = nixpkgs.lib; 
-  in 
-  {
-    devShell.${system} = import ./shell.nix { inherit pkgs; };
+      lib = nixpkgs.lib;
+    in {
+      devShell.${system} = import ./shell.nix { inherit pkgs; };
 
-    homeManagerConfigurations = {
-      tejasagarwal = home-manager.lib.homeManagerConfiguration {
-        inherit system pkgs; 
-        username = "tejasagarwal";
-        homeDirectory = "/home/tejasagarwal";
-        stateVersion="21.05";
-        configuration = {
-          imports = [ ./home ];
+      homeManagerConfigurations = {
+        tejasagarwal = home-manager.lib.homeManagerConfiguration {
+          inherit system pkgs;
+          username = "tejasagarwal";
+          homeDirectory = "/home/tejasagarwal";
+          stateVersion = "21.05";
+          configuration = { imports = [ ./home ]; };
+        };
+
+        minimal = home-manager.lib.homeManagerConfiguration {
+          inherit system pkgs;
+          username = "tejasagarwal";
+          homeDirectory = "/home/tejasagarwal";
+          stateVersion = "21.05";
+          configuration = { imports = [ ./home/minimal.nix ]; };
         };
       };
 
-      minimal = home-manager.lib.homeManagerConfiguration {
-        inherit system pkgs;
-        username = "tejasagarwal";
-        homeDirectory = "/home/tejasagarwal";
-        stateVersion = "21.05";
-        configuration = {
-          imports = [ ./home/minimal.nix ];
+      nixosConfigurations = {
+        delphin = lib.nixosSystem {
+          inherit system pkgs;
+          modules = [ ./hosts/delphin ];
         };
       };
     };
-
-    nixosConfigurations = {
-      delphin = lib.nixosSystem {
-        inherit system;         
-        modules = [ ./hosts/delphin ];
-      };        
-    };   
-  };
 }

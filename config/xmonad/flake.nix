@@ -1,4 +1,4 @@
-# fork of 
+# fork of
 # https://github.com/alternateved/nixos-config/blob/main/config/xmonad/flake.nix
 {
   inputs = {
@@ -14,12 +14,7 @@
   };
 
   outputs = { self, flake-utils, nixpkgs, xmonad, xmonad-contrib }:
-    let 
-      overlays = [ 
-        xmonad.overlay 
-        xmonad-contrib.overlay 
-  #      (import ../../overlays)
-      ];
+    let overlays = [ xmonad.overlay xmonad-contrib.overlay ];
     in flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
