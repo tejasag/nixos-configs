@@ -8,7 +8,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.home-manager.enable = true;
+  programb.home-manager.enable = true;
   home.username = "tejasagarwal";
   home.homeDirectory = "/home/tejasagarwal";
 
@@ -71,7 +71,6 @@
     protonvpn-gui   # vpn
 
     # Display
-    herbstluftwm
     nitrogen        # wallpaper dameon
     polybar         # system tray
     picom           # compositor
@@ -84,6 +83,11 @@
     notepadqq       # gui editor 
     vscode          # Text Editor
     tmux            # terminal multiplexer 
+
+    # WMs & related
+    herbstluftwm    
+    haskellPackages.xmonad
+    haskellPackages.xmonad-tejasag
 
     # Hack club
     # sepia           # Mimimalist functional language (@rishiosaur)
