@@ -28,7 +28,7 @@
 
       pkgs = import nixpkgs {
         inherit system;
-        config = { allowUnfree = true; }; # sorry Stallman onii-san
+        config = { allowUnfree = true; }; 
         overlays = [
           hackclub.overlay.${system}
           nur.overlay
