@@ -22,7 +22,7 @@ outputs = { self, flake-utils, nixpkgs, xmonad, xmonad-contrib }:
       };
     in rec {
       devShell = pkgs.haskellPackages.shellFor {
-        packages = p: [ p.alternateved-xmonad p.xmonad-contrib ];
+        packages = p: [ p.tejasag-xmonad p.xmonad-contrib ];
         buildInputs = with pkgs.haskellPackages; [
           cabal-install
           haskell-language-server
@@ -32,7 +32,7 @@ outputs = { self, flake-utils, nixpkgs, xmonad, xmonad-contrib }:
           implicit-hie
         ];
       };
-      defaultPackage = pkgs.haskellPackages.alternateved-xmonad;
+      defaultPackage = pkgs.haskellPackages.tejasag-xmonad;
     }) // {
       inherit overlays;
     };
