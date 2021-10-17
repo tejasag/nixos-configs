@@ -16,7 +16,7 @@
     ../modules/neovim
     ../modules/fish
     ../modules/git
-   # ../modules/kitty
+    ../modules/kitty
     ../modules/starship
     ../modules/emacs
     ../modules/direnv
