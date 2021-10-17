@@ -16,7 +16,7 @@
     ../modules/neovim
     ../modules/fish
     ../modules/git
-    ../modules/kitty
+   # ../modules/kitty
     ../modules/starship
     ../modules/emacs
     ../modules/direnv
@@ -27,7 +27,6 @@
     # Util 
     git             # version control system
     wirelesstools   # Wireless CLI utilities
-    kitty           # terminal
     flameshot       # screenshot utility
     gnutls          # GNU transport layer security lib
     neofetch        # CLI to show system information
