@@ -8,21 +8,21 @@
   description = "tejasag's nixos-configs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-21.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # ========= overlays ========= #
-    # hackclub.url = "github:hackclub/nix-overlay";
+    hackclub.url = "github:hackclub/nix-overlay";
     nur.url = "github:nix-community/NUR";
     xmobar.url = "github:tejasag/xmobar";
     xmonad.url = "github:xmonad/xmonad";
     xmonad-contrib.url = "github:xmonad/xmonad-contrib";
   };
 
-  outputs = { nixpkgs, home-manager, nur, xmobar, xmonad, xmonad-contrib, ... }:
+  outputs = { nixpkgs, home-manager, nur, hackclub, xmobar, xmonad, xmonad-contrib, ... }:
     let
       system = "x86_64-linux";
 
@@ -30,7 +30,7 @@
         inherit system;
         config = { allowUnfree = true; }; # sorry Stallman onii-san
         overlays = [
-          # hackclub.overlay
+          hackclub.overlay.${system}
           nur.overlay
           xmobar.overlay
           xmonad.overlay
@@ -53,7 +53,7 @@
         };
 
         minimal = home-manager.lib.homeManagerConfiguration {
-          inherit system pkgs;
+         inherit system pkgs;
           username = "tejasagarwal";
           homeDirectory = "/home/tejasagarwal";
           stateVersion = "21.05";
