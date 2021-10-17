@@ -8,7 +8,7 @@
 { config, pkgs, ... }:
 
 {
-  programb.home-manager.enable = true;
+  programs.home-manager.enable = true;
   home.username = "tejasagarwal";
   home.homeDirectory = "/home/tejasagarwal";
 
