@@ -86,6 +86,6 @@
     herbstluftwm    
 
     # Hack club
-    sepia           # Mimimalist functional language (@rishiosaur)
+    # sepia           # Mimimalist functional language (@rishiosaur)
   ];
 }
