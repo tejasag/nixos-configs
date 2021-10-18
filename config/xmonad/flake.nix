@@ -14,7 +14,7 @@
   };
 
   outputs = { self, flake-utils, nixpkgs, xmonad, xmonad-contrib }:
-    let overlays = [ xmonad.overlay xmonad-contrib.overlay ];
+    let overlays = [ xmonad.overlay xmonad-contrib.overlay (import ../../overlays) ];
     in flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
@@ -22,17 +22,6 @@
           config.allowBroken = true;
         };
       in rec {
-        devShell = pkgs.haskellPackages.shellFor {
-          packages = p: [ p.tejasag-xmonad p.xmonad-contrib ];
-          buildInputs = with pkgs.haskellPackages; [
-            cabal-install
-            haskell-language-server
-            hlint
-            ghcid
-            ormolu
-            implicit-hie
-          ];
-        };
         defaultPackage = pkgs.haskellPackages.tejasag-xmonad;
       }) // {
         inherit overlays;
