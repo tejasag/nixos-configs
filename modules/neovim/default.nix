@@ -34,8 +34,6 @@ let g:gruvbox_material_transparent_background = 1
 colorscheme gruvbox-material
 let g:airline_theme  = 'gruvbox_material'
 
-let g:rustfmt_autosave=1
-
 set relativenumber number
 set tabstop=4
 set shiftwidth=4
