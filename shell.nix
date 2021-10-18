@@ -11,5 +11,8 @@ pkgs.mkShell {
     haskellPackages.hindent
     haskellPackages.hoogle
     haskellPackages.ormolu
+    haskellPackages.haskell-language-server
+    haskellPackages.hlint
+    haskellPackages.ormolu
   ];
 }
