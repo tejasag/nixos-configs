@@ -87,6 +87,6 @@
 
     # Hack club
     # sepia           # Mimimalist functional language (@rishiosaur)
-    aces            # Custom character set encoder
+    aces            # Custom character set encoder (@quackduck)
   ];
 }

@@ -18,7 +18,6 @@
   ];
 
   home.packages = with pkgs; [
-
     # Util 
     git             # version control system
     htop            # System monitor
