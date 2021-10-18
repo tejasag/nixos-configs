@@ -23,9 +23,9 @@
     ];
    extraConfig = ''
 colorscheme gruvbox
-let g:gruvbox_transparent_bg = 1
-let g:gruvbox_contrast_Dark="soft"
-let g:rustfmt_autosave = 1
+let g:gruvbox_transparent_bg=1
+let g:gruvbox_contrast_dark="soft"
+let g:rustfmt_autosave=1
 
 set relativenumber number
 set tabstop=4
