@@ -24,15 +24,11 @@
       coc-tabnine
     ];
    extraConfig = ''
-" colorscheme gruvbox
-" let g:gruvbox_transparent_bg=1
-" let g:gruvbox_contrast_dark="medium"
-
 if has('termguicolors')
     set termguicolors
 endif
-set background=light
-let g:gruvbox_material_background = 'soft'
+set background=dark
+let g:gruvbox_material_background = 'medium'
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_transparent_background = 1
 colorscheme gruvbox-material
