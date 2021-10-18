@@ -12,19 +12,32 @@
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       vim-nix
-      gruvbox
+      # gruvbox
+      gruvbox-material
       nerdtree
       yats-vim
       vim-devicons
       vim-nerdtree-syntax-highlight
       vim-polyglot
+      vim-airline
       coc-nvim
       coc-tabnine
     ];
    extraConfig = ''
-colorscheme gruvbox
-let g:gruvbox_transparent_bg=1
-let g:gruvbox_contrast_dark="soft"
+" colorscheme gruvbox
+" let g:gruvbox_transparent_bg=1
+" let g:gruvbox_contrast_dark="medium"
+
+if has('termguicolors')
+    set termguicolors
+endif
+set background=dark
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_transparent_background = 1
+colorscheme gruvbox-material
+let g:airline_theme  = 'gruvbox_material'
+
 let g:rustfmt_autosave=1
 
 set relativenumber number
