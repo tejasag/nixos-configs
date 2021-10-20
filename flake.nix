@@ -22,13 +22,13 @@
     xmonad-contrib.url = "github:xmonad/xmonad-contrib";
   };
 
-  outputs = { nixpkgs, home-manager, nur, hackclub, xmobar, xmonad, xmonad-contrib, ... }:
+  outputs = inputs@{nixpkgs, home-manager, nur, hackclub, xmobar, xmonad, xmonad-contrib, ... }:
     let
       system = "x86_64-linux";
 
       pkgs = import nixpkgs {
         inherit system;
-        config = { allowUnfree = true; }; 
+        config.allowUnfree = true;
         overlays = [
           hackclub.overlay.${system}
           nur.overlay
@@ -49,7 +49,7 @@
           username = "tejasagarwal";
           homeDirectory = "/home/tejasagarwal";
           stateVersion = "21.05";
-          configuration = { imports = [ ./home ]; };
+          configuration.imports = [ ./home ];
         };
 
         minimal = home-manager.lib.homeManagerConfiguration {
@@ -57,7 +57,7 @@
           username = "tejasagarwal";
           homeDirectory = "/home/tejasagarwal";
           stateVersion = "21.05";
-          configuration = { imports = [ ./home/minimal.nix ]; };
+          configuration.imports = [ ./home/minimal.nix ]; 
         };
       };
 

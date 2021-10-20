@@ -16,6 +16,7 @@
       gc = "git commit -m $1";
       gp = "git push origin $1";
       commit = "ga . && gc $1";
+      pkgs = "nix-fish -p";
     };
     shellInit = ''
       set -x DIRENV_LOG_FORMAT ""
