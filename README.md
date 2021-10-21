@@ -2,4 +2,4 @@
 
 My dotfiles and Nix/Nixos Configs.
 
-Everything in the repo is heavily inspired from [Alternateved's Config](httos://github.com/alternateved/nixos-config)
+Everything in the repo is heavily inspired from [Alternateved's Config](https://github.com/alternateved/nixos-config)
