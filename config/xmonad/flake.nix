@@ -14,7 +14,12 @@
   };
 
   outputs = { self, flake-utils, nixpkgs, xmonad, xmonad-contrib }:
-    let overlays = [ xmonad.overlay xmonad-contrib.overlay (import ../../overlays) ];
+    let 
+      overlays = [ 
+        xmonad.overlay 
+        xmonad-contrib.overlay 
+        (import ../../overlays) 
+      ];
     in flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
