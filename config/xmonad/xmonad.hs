@@ -45,6 +45,18 @@ myKeys =
     ("M-<Return>", spawn myTerminal)
   ]
 
+
+-------------------------------------------------------------------------
+-- NIXOS RESTARTHOOK
+-------------------------------------------------------------------------
+restartEventHook e@ClientMessageEvent {ev_message_type = mt} = do
+  a <- getAtom "XMONAD_RESTART"
+  if mt == a
+    then XMonad.Operations.restart "tejasag-xmonad" True >> return (All True)
+    else return $ All True
+restartEventHook _ = return $ All True
+
+
 ---------------------------------------------
 -- CONFIG
 ---------------------------------------------
