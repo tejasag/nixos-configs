@@ -40,9 +40,7 @@
       layout = "us";
       xkbOptions = "eurosign:e";
 
-      libinput = {
-        enable = true;
-      };
+      libinput.enable = true;
     };
   };
 

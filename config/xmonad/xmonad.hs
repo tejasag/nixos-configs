@@ -12,7 +12,8 @@ import XMonad.Util.Ungrab
 -- VARIABLES
 ---------------------------------------------
 myFont :: String
-myFont = "xft:Iosevka Nerd Font Mono:style=regular:size=12:antialias=true:hinting=true"
+myFont =
+  "xft:Iosevka Nerd Font Mono:style=regular:size=12:antialias=true:hinting=true"
 
 myModMask :: KeyMask
 myModMask = mod4mask -- super/windows key
@@ -41,8 +42,19 @@ myKeys =
   [ -- XMonad
     ("M-S-r", spawn "xmonad --restart"),
     -- Terminal
-    ("M-S-<Return>", spawn myTerminal)
+    ("M-<Return>", spawn myTerminal)
   ]
+
+---------------------------------------------
+-- CONFIG
+---------------------------------------------
+myConfig =
+  def
+    { modMask = myModMask,
+      terminal = myTerminal,
+      layoutHook = myLayout
+    }
+    `additionalKeysP` myKeys
 
 ---------------------------------------------
 -- MAIN
@@ -50,9 +62,4 @@ myKeys =
 main :: IO ()
 main =
   xmonad $
-    def
-      { modMask = myModMask,
-        terminal = myTerminal,
-        layoutHook = myLayout
-      }
-      `additionalKeysP` myKeys
+    myConfig
