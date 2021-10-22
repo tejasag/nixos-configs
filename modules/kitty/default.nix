@@ -11,7 +11,7 @@
     enable = true;
 
     font = {
-      name = "Iosevka Nerd Font Mono";
+      name = "Iosevka Nerd Font";
       size = 13;
     };
 
