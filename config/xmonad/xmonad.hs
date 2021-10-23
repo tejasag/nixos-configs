@@ -5,12 +5,13 @@ module Main (main) where
 
 -- Data
 import Data.Monoid (All (..))
+-- Base
 import XMonad
 -- Layout
 import XMonad.Layout.ThreeColumns
 import XMonad.Operations
 -- Utils
-import XMonad.Util.EZConfig (additionalKeysP)
+import XMonad.Util.EZConfig 
 import XMonad.Util.Ungrab
 
 ---------------------------------------------
