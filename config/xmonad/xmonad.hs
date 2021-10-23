@@ -4,6 +4,8 @@
 module Main (main) where
 
 import XMonad
+-- Data
+import Data.Monoid (All (..))
 -- Layout
 import XMonad.Layout.ThreeColumns
 import XMonad.Operations
