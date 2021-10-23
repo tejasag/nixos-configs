@@ -3,14 +3,14 @@
 ---------------------------------------------
 module Main (main) where
 
-import XMonad
 -- Data
 import Data.Monoid (All (..))
+import XMonad
 -- Layout
 import XMonad.Layout.ThreeColumns
 import XMonad.Operations
 -- Utils
-import XMonad.Util.EZConfig
+import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.Ungrab
 
 ---------------------------------------------
