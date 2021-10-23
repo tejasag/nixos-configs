@@ -5,7 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      # Window Manager  
+      # Window Managers  
       ../../modules/window-managers/herbstluftwm.nix
       ../../modules/window-managers/xmonad.nix
     ];
