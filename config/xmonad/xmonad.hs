@@ -49,6 +49,12 @@ myKeys =
   ]
 
 -------------------------------------------------------------------------
+-- EVENTHOOK
+-------------------------------------------------------------------------
+myHandleEventHook :: Event -> X All
+myHandleEventHook = restartEventHook
+
+-------------------------------------------------------------------------
 -- NIXOS RESTARTHOOK
 -------------------------------------------------------------------------
 restartEventHook e@ClientMessageEvent {ev_message_type = mt} = do
@@ -65,7 +71,8 @@ myConfig =
   def
     { modMask = myModMask,
       terminal = myTerminal,
-      layoutHook = myLayout
+      layoutHook = myLayout,
+      handleEventHook = myHandleEventHook
     }
     `additionalKeysP` myKeys
 
