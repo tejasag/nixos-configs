@@ -1,9 +1,12 @@
 ---------------------------------------------
 -- Imports
 ---------------------------------------------
+module Main (main) where
+
 import XMonad
 -- Layout
 import XMonad.Layout.ThreeColumns
+import XMonad.Operations
 -- Utils
 import XMonad.Util.EZConfig
 import XMonad.Util.Ungrab
@@ -45,7 +48,6 @@ myKeys =
     ("M-<Return>", spawn myTerminal)
   ]
 
-
 -------------------------------------------------------------------------
 -- NIXOS RESTARTHOOK
 -------------------------------------------------------------------------
@@ -55,7 +57,6 @@ restartEventHook e@ClientMessageEvent {ev_message_type = mt} = do
     then XMonad.Operations.restart "tejasag-xmonad" True >> return (All True)
     else return $ All True
 restartEventHook _ = return $ All True
-
 
 ---------------------------------------------
 -- CONFIG
