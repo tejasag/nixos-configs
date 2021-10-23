@@ -22,7 +22,7 @@ myFont =
   "xft:Iosevka Nerd Font Mono:style=regular:size=12:antialias=true:hinting=true"
 
 myModMask :: KeyMask
-myModMask = mod4mask -- super/windows key
+myModMask = mod4Mask -- super/windows key
 
 myTerminal :: String
 myTerminal = "kitty"
