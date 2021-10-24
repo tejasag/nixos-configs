@@ -26,6 +26,7 @@
       set -x DOOMDIR "~/.dotfiles/config/doom"
       set fish_greeting
       set EDITOR "nvim"
+      ~/.dotfiles/scripts/shell-color-scripts/colorscript.sh
     '';
   };
 }
