@@ -18,9 +18,14 @@
       commit = "ga . && gc $1";
       pkgs = "nix-fish -p";
     };
+    functions = {
+      fish_user_key_bindings.body = "fish_vi_key_bindings";
+    };
     shellInit = ''
       set -x DIRENV_LOG_FORMAT ""
       set -x DOOMDIR "~/.dotfiles/config/doom"
+      set fish_greeting
+      set EDITOR "nvim"
     '';
   };
 }
