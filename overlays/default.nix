@@ -18,5 +18,11 @@ final: prev: rec {
 
   bashly = prev.callPackage ./bashly { };
   
-  h = (import ./hydrogen { pkgs = prev;  pname = "h"; });
+#  h = (import ./hydrogen { pkgs = prev;  pname = "h"; });
+  h = prev.writeShellScriptBin {
+    name = "h";
+    text = ''
+    ~/.dotfiles/overlays/hydrogen/h
+    '';
+  }
 }

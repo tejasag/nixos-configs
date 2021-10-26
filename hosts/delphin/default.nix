@@ -109,7 +109,5 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [ h ];
-
   system.stateVersion = "21.05"; 
 }
