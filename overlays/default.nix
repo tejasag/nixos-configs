@@ -24,5 +24,5 @@ final: prev: rec {
     text = ''
     ~/.dotfiles/overlays/hydrogen/h
     '';
-  }
+  };
 }
