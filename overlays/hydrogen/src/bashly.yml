@@ -1,0 +1,56 @@
+name: h
+help: H (or Hydrogen) is a CLI with a bunch of utilities.
+version: 0.1.0
+
+commands:
+- name: rebuild
+  short: re
+  help: Rebuild NixOS or home-manager
+  
+  args:
+  - name: module
+    required: false
+    help: Module to rebuild.
+
+  examples:
+  - h rebuild 
+  - h re
+  - h re hm
+
+
+- name: update
+  short: u
+  help: Update flake inputs
+
+  args:
+  - name: input 
+    required: false
+    help: Inputs to update
+
+  example:
+  - h update
+  - h u 
+  - h u nixpkgs
+
+
+- name: test
+  short: t
+  help: Rebuild and test the system
+
+  examples:
+  - h test
+  - h t
+
+
+- name: search
+  short: s
+  help: Search for a package in nixpkgs
+
+  args:
+  - name: package
+    required: true
+    help: Package to search for
+
+  examples:
+  - h search emacs
+  - h s neovim

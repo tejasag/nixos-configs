@@ -23,6 +23,7 @@
   ];
 
   home.packages = with pkgs; [
+    h               # hydrogen.
 
     # Util 
     git             # version control system
@@ -67,6 +68,7 @@
     jdk             # java development kit ._.
     virtualbox      # pc emulator
     protonvpn-gui   # vpn
+    bashly          # bashly
 
     # Display
     nitrogen        # wallpaper dameon

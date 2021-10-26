@@ -1,10 +1,10 @@
-# taken from https://github.com/alternateved/nixos-config/blob/main/overlays/default.nix
-_: pkgs: rec {
-  haskellPackages = pkgs.haskellPackages.override (old: {
-    overrides = pkgs.lib.composeExtensions (old.overrides or (_: _: { }))
+final: prev: rec {
+  # taken from https://github.com/alternateved/nixos-config/blob/main/overlays/default.nix
+  haskellPackages = prev.haskellPackages.override (old: {
+    overrides = prev.lib.composeExtensions (old.overrides or (_: _: { }))
       (self: super: rec {
         tejasag-xmonad = self.callCabal2nix "tejasag-xmonad"
-          (pkgs.lib.sourceByRegex ../config/xmonad [
+          (prev.lib.sourceByRegex ../config/xmonad [
             "xmonad.hs"
             "tejasag-xmonad.cabal"
           ]) { };
@@ -15,4 +15,8 @@ _: pkgs: rec {
         #  ]) { };
       });
   });
+
+  bashly = prev.callPackage ./bashly { };
+  
+  h = prev.callPackage ./hydrogen { pname = "h"; };
 }
