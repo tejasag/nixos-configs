@@ -23,7 +23,7 @@
   ];
 
   home.packages = with pkgs; [
- #   h               # hydrogen.
+    h               # hydrogen.
 
     # Util 
     git             # version control system

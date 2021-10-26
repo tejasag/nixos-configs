@@ -3,9 +3,6 @@
   pname ? "hydrogen",
 }:
 
-pkgs.writeShellScriptBin {
-  name = pname;
-  text = ''
+pkgs.writeShellScriptBin pname ''
   ./h
-  '';
-}
+''
