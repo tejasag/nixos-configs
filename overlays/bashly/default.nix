@@ -9,4 +9,4 @@ bundlerApp {
   inherit pname;
   gemdir = ./.;
   exes = [ "bashly" ];
-};
+}
