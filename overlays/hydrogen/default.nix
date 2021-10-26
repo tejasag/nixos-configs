@@ -1,11 +1,10 @@
 {
-  lib,
-  writeShellScriptBin,
+  pkgs
   
   pname ? "hydrogen",
 }:
 
-writeShellScriptBin {
+pkgs.writeShellScriptBin {
   name = pname;
   text = ''
   ./h

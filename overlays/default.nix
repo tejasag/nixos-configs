@@ -18,5 +18,5 @@ final: prev: rec {
 
   bashly = prev.callPackage ./bashly { };
   
-  h = prev.callPackage ./hydrogen { pname = "h"; };
+  h = ./hydrogen { pkgs = prev;  pname = "h"; };
 }
