@@ -334,20 +334,16 @@ h_rebuild_command() {
 # :command.function
 h_update_command() {
   # :src/update_command.sh
-  #echo "# this file is located in 'src/update_command.sh'"
-  #echo "# code for 'h update' goes here"
-  #echo "# you can edit it freely and regenerate (it will not be overwritten)"
-  #inspect_args
   input=${args[input]}
 
   pushd ~/.dotfiles
   if [ $input ]; then
       info "Updating the '$input' input..."
-      nix flake lock --impure --update-input $input
+      RESULT=$(nix flake lock --impure --update-input $input)
       success "Successfully updated the '$input' flake!"
   else
       info "Updating all inputs..."
-      nix flake update --impure
+      RESULT=$(nix flake update --impure)
       success "Successfully updated all inputs!"
   fi
   popd
