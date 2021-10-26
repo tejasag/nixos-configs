@@ -3,7 +3,7 @@
   writeShellScriptBin,
   
   pname ? "hydrogen",
-}
+}:
 
 writeShellScriptBin {
   name = pname;

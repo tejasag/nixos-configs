@@ -3,7 +3,7 @@
   bundlerApp,
 
   pname ? "bashly"
-}
+}:
 
 bundlerApp {
   inherit pname;
