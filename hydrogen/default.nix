@@ -4,5 +4,5 @@
 }:
 
 pkgs.writeShellScriptBin pname ''
-  ./h
+  ~/.dotfiles/hydrogen/h
 ''
