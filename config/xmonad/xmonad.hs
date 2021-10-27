@@ -47,6 +47,7 @@ myKeys :: [(String, X ())]
 myKeys =
   [ -- XMonad
     ("M-S-r", spawn "xmonad --restart"),
+    ("M-S-c", kill),
     -- Terminal
     ("M-<Return>", spawn myTerminal),
     ("M-d", spawn "discord")
