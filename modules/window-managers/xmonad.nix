@@ -2,7 +2,7 @@
 
 {
   services.xserver = {
-   # displayManager.defaultSession = "none+myxmonad";
+    displayManager.defaultSession = "none+myxmonad";
     windowManager.session = [{
         name="myxmonad";
         start = ''
