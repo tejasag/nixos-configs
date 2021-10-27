@@ -2,16 +2,14 @@
 
 {
   services.xserver = {
-    displayManager.defaultSession = "none+myxmonad";
-    windowManager = {
-      session = [{
+   # displayManager.defaultSession = "none+myxmonad";
+    windowManager.session = [{
         name="myxmonad";
         start = ''
           /usr/bin/env tejasag-xmonad &
-          waitPID=$
+          waitPID=$!
         '';
-      }];
-    };
+    }];
   };
 
   environment.systemPackages = with pkgs; [
