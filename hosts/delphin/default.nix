@@ -8,6 +8,8 @@
       # Window Managers  
       ../../modules/window-managers/herbstluftwm.nix
       ../../modules/window-managers/xmonad.nix
+
+      ../../modules/lightdm
     ];
 
   # boot
@@ -34,7 +36,7 @@
     xserver = {
       enable = true;
 
-      displayManager.gdm.enable = true;
+      # displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
 
       layout = "us";
