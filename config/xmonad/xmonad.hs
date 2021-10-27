@@ -48,7 +48,8 @@ myKeys =
   [ -- XMonad
     ("M-S-r", spawn "xmonad --restart"),
     -- Terminal
-    ("M-<Return>", spawn myTerminal)
+    ("M-<Return>", spawn myTerminal),
+    ("M-d", spawn "discord")
   ]
 
 ---------------------------------------------
