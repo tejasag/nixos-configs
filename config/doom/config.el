@@ -14,7 +14,7 @@
 (require 'treemacs-all-the-icons)
 (treemacs-load-theme "all-the-icons")
 
-(add-to-list 'custom-theme-load-path "~/.doom.d/themes")
+;; (add-to-list 'custom-theme-load-path "~/.doom.d/themes")
 
 ;; Cursors
 (setq evil-insert-state-cursor 'box)

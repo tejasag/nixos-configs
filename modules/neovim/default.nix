@@ -22,6 +22,7 @@
       vim-airline
       coc-nvim
       coc-tabnine
+      copilot-vim
     ];
    extraConfig = ''
 if has('termguicolors')
