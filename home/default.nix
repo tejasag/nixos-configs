@@ -45,6 +45,7 @@
     niv             # nix dep manager
     wget            # HTTP retriever
     blueman         # bluetooth manager
+    ctp             # Project creation tool
 
     # Misc
     ngrok           # proxy tunnel
