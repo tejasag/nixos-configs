@@ -5,6 +5,7 @@ hc() {
 }
 
 TERMINAL=kitty
+BROWSER=brave
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -17,6 +18,7 @@ hc keybind $Mod-Shift-q close
 hc keybind $Mod-Shift-r reload
 
 hc keybind $Mod-Return spawn "${TERMINAL:-kitty}"
+hc keybind $Mod-Return-Ctrl spawn "${BROWSER:-brave}"
 
 # focusing clients
 hc keybind $Mod-h     focus left
