@@ -11,12 +11,12 @@
     enable = true;
     shellAliases = {
       lx = "natls -lgm";
-      nix-fish = "nix-shell --command 'fish'";
       ga = "git add";
       gc = "git commit -m $1";
       gp = "git push origin $1";
       commit = "ga . && gc $1";
       pkgs = "nix-fish -p";
+      clone = "git clone git@github.com/$1/$2.git";
     };
     functions = {
       fish_user_key_bindings.body = "fish_vi_key_bindings";
