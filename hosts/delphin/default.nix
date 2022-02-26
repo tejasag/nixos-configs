@@ -7,7 +7,7 @@
 
       # Window Managers  
       ../../modules/window-managers/herbstluftwm.nix
-      ../../modules/window-managers/xmonad.nix
+      #../../modules/window-managers/xmonad.nix
 
       # ../../modules/lightdm
     ];
