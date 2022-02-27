@@ -67,6 +67,17 @@
     keybindings = {
       "ctrl+shift+alt+l" = "next_tab";
       "ctrl+shift+alt+h" = "previous_tab";
+      "F5": "launch --location=hsplit";
+      "F6": "launch --location=vsplit";
+      "F7": "layout_action rotate";
+      "shift+up": "move_window up";
+      "shift+left": "move_window left";
+      "shift+right": "move_window right";
+      "shift+down": "move_window down";
+      "ctrl+left": "neighboring_window left";
+      "ctrl+right": "neighboring_window right";
+      "ctrl+up": "neighboring_window up";
+      "ctrl+down": "neighboring_window down";
     };
 
     extraConfig = ''
