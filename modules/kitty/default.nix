@@ -70,14 +70,14 @@
       "F5"= "launch --location=hsplit";
       "F6"= "launch --location=vsplit";
       "F7"= "layout_action rotate";
-      "shift+up"= "move_window up";
-      "shift+left"= "move_window left";
-      "shift+right"= "move_window right";
-      "shift+down"= "move_window down";
-      "ctrl+left"= "neighboring_window left";
-      "ctrl+right"= "neighboring_window right";
-      "ctrl+up"= "neighboring_window up";
-      "ctrl+down"= "neighboring_window down";
+      "shift+k"= "move_window up";
+      "shift+h"= "move_window left";
+      "shift+l"= "move_window right";
+      "shift+j"= "move_window down";
+      "ctrl+h"= "neighboring_window left";
+      "ctrl+l"= "neighboring_window right";
+      "ctrl+k"= "neighboring_window up";
+      "ctrl+j"= "neighboring_window down";
     };
 
     extraConfig = ''
