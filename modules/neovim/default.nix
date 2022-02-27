@@ -60,7 +60,6 @@ let g:coc_global_extensions = [
       \ 'coc-graphql',
       \ 'coc-html',
       \ 'coc-prettier',
-      \ 'coc-rls',
       \ 'coc-rust-analyzer',
       \ 'coc-prisma',
       \ 'coc-python',
