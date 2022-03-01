@@ -12,7 +12,6 @@
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       vim-nix
-      # gruvbox
       gruvbox-material
       nerdtree
       yats-vim
@@ -22,12 +21,12 @@
       vim-airline
       coc-nvim
       coc-tabnine
-      copilot-vim
     ];
    extraConfig = ''
 if has('termguicolors')
     set termguicolors
 endif
+
 set background=dark
 let g:gruvbox_material_background = 'medium'
 let g:gruvbox_material_enable_italic = 1
@@ -45,31 +44,19 @@ highlight NonText guibg=none
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
-" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-
-"let g:coc_node_path="/nix/store/d0z9k8dpd4ryalfmnyaahybri8p49ibs-nodejs-14.17.5/bin/node"
 let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-git',
-      \ 'coc-clangd',
       \ 'coc-css',
-      \ 'coc-elixir',
       \ 'coc-eslint',
-      \ 'coc-flutter',
-      \ 'coc-go',
-      \ 'coc-graphql',
       \ 'coc-html',
       \ 'coc-prettier',
       \ 'coc-rust-analyzer',
-      \ 'coc-prisma',
       \ 'coc-python',
-      \ 'coc-rome',
       \ 'coc-svelte',
-      \ 'coc-sql',
       \ 'coc-tailwindcss',
       \ 'coc-toml',
       \ 'coc-tsserver',
-      \ 'coc-vetur',
       \ 'coc-yank',
       \ 'coc-pairs',
       \ 'coc-snippets']
