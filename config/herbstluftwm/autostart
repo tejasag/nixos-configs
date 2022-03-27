@@ -8,7 +8,7 @@ nitrogen --restore &
 ~/.dotfiles/config/herbstluftwm/configs/setup
 
 # Polybar
-polybar -q main -c "~/.dotfiles/config/polybar/config.ini"
+polybar -q main -c "~/.dotfiles/config/polybar/config.ini" &
 
 # Conky
 conky --config="~/.dotfiles/config/conky/gruvbox-dark.conkyrc"
