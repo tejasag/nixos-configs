@@ -47,6 +47,7 @@
     wget            # HTTP retriever
     blueman         # bluetooth manager
     ranger          # Terminal file manager
+    conky           # System monitor
 
     # Misc
     ngrok           # proxy tunnel
