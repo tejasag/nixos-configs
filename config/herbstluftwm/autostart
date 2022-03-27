@@ -11,5 +11,5 @@ nitrogen --restore &
 polybar -q main -c "~/.dotfiles/config/polybar/config.ini" &
 
 # Conky
-conky --config="~/.dotfiles/config/conky/gruvbox-dark.conkyrc"
+conky -c ~/.dotfiles/config/conky/gruvbox-dark.conkyrc
 
