@@ -67,9 +67,6 @@
     keybindings = {
       "ctrl+shift+alt+l" = "next_tab";
       "ctrl+shift+alt+h" = "previous_tab";
-      "F5"= "launch --location=hsplit";
-      "F6"= "launch --location=vsplit";
-      "F7"= "layout_action rotate";
       "shift+k"= "move_window up";
       "shift+h"= "move_window left";
       "shift+l"= "move_window right";
