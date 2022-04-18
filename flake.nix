@@ -68,7 +68,7 @@
           modules = [ 
             ./hosts/delphin
             {
-              nix.registry.self.flake = inputs.nixpkgs;
+              nix.registry.nixpkgs.flake = inputs.nixpkgs;
             }
           ];
         };
