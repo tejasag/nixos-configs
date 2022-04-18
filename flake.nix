@@ -29,6 +29,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        
         overlays = [
           hackclub.overlay.${system}
           nur.overlay
@@ -64,7 +65,12 @@
       nixosConfigurations = {
         delphin = lib.nixosSystem {
           inherit system pkgs;
-          modules = [ ./hosts/delphin ];
+          modules = [ 
+            ./hosts/delphin
+            {
+              nix.registry.self.flake = inputs.nixpkgs;
+            }
+          ];
         };
       };
     };
