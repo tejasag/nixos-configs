@@ -70,7 +70,6 @@
             ./hosts/delphin
             {
               nix = {
-                package = inputs.nix-dram.packages.x86_64-linux.nix-dram;
                 registry.nixpkgs.flake = inputs.nixpkgs;
               };
             }
