@@ -20,7 +20,7 @@
     };
     functions = {
       fish_user_key_bindings.body = "fish_vi_key_bindings";
-      nix.body = "IN_NIX_SHELL=impure name=shell nix $argv";
+      nix.body = "IN_NIX_SHELL=impure name=shell command nix $argv";
     };
     shellInit = ''
       set -x DIRENV_LOG_FORMAT ""
