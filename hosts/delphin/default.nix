@@ -89,11 +89,12 @@
   time.timeZone = "Asia/Kolkata";
 
   nix = {
-    package = pkgs.nixFlakes;
+    #package = pkgs.nixFlakes;
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true
       experimental-features = nix-command flakes
+      default-flake = nixpkgs
     '';
     autoOptimiseStore = true;
     gc = {

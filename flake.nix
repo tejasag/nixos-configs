@@ -13,6 +13,7 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-dram.url = "github:dramforever/nix-dram";
 
     # ========= overlays ========= #
     hackclub.url = "github:hackclub/nix-overlay";
@@ -68,7 +69,10 @@
           modules = [ 
             ./hosts/delphin
             {
-              nix.registry.nixpkgs.flake = inputs.nixpkgs;
+              nix = {
+                package = inputs.nix-dram.packages.x86_64-linux.nix-dram;
+                registry.nixpkgs.flake = inputs.nixpkgs;
+              };
             }
           ];
         };
