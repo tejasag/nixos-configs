@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    bashly (0.6.8)
+    bashly (0.7.9)
       colsole (~> 0.6)
-      completely (~> 0.2)
+      completely (~> 0.3)
       mister_bin (~> 0.7)
       requires (~> 0.1)
     colsole (0.7.2)
-    completely (0.2.0)
+    completely (0.3.1)
       colsole (~> 0.6)
       mister_bin (~> 0.7)
     docopt (0.6.1)
@@ -17,10 +17,10 @@ GEM
     requires (0.2.0)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   bashly
 
 BUNDLED WITH
-   2.1.4
+   2.3.9

@@ -15,7 +15,6 @@
       gc = "git commit -m $1";
       gp = "git push origin $1";
       commit = "ga . && gc $1";
-      # pkgs = "nix shell --command 'fish' -p";
       clone = "git clone git@github.com/$1/$2.git";
     };
     functions = {
@@ -27,7 +26,6 @@
           set pkg (string join '' 'nixpkgs#' $i)
           set cmd (string join ' ' $cmd $pkg)
         end
-        printf %s $cmd
         eval $cmd
       ";
     };

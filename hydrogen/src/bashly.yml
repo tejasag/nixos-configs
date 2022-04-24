@@ -54,3 +54,17 @@ commands:
   examples:
   - h search emacs
   - h s neovim
+
+- name: shell
+  short: s
+  help: Setup files for an adhoc shell in the directory
+  
+  args:
+    - name: packages
+      required: true
+      help: Packages to add to the shell
+      repeatable: true
+
+  examples:
+    - h s hello
+    - h shell hello
