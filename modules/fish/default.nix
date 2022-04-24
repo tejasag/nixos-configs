@@ -22,12 +22,12 @@
       fish_user_key_bindings.body = "fish_vi_key_bindings";
       nix.body = "IN_NIX_SHELL=impure name=shell command nix $argv";
       pkgs.body = "
-        set cmd ''
+        set cmd 'nix shell'
         for i in (string split ' ' $argv)
           set pkg (string join '' 'nixpkgs#' $i)
           set cmd (string join ' ' $cmd $pkgs)
         end
-        command nix shell $cmd
+        eval command $cmd
       ";
     };
     shellInit = ''
