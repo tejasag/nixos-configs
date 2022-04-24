@@ -1,7 +1,7 @@
 # `hydrogen`
 
 ```
-H (or Hydrogen) is a CLI with a bunch of utilities.
+h - H (or Hydrogen) is a CLI with a bunch of utilities.
 
 Usage:
   h [command]
@@ -13,4 +13,5 @@ Commands:
   update    Update flake inputs
   test      Rebuild and test the system
   search    Search for a package in nixpkgs
+  shell     Setup files for an adhoc shell in the directory
 ```

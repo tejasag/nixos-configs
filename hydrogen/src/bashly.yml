@@ -1,6 +1,6 @@
 name: h
 help: H (or Hydrogen) is a CLI with a bunch of utilities.
-version: 0.1.0
+version: 0.1.1
 
 commands:
 - name: rebuild
@@ -27,7 +27,7 @@ commands:
     required: false
     help: Inputs to update
 
-  example:
+  examples:
   - h update
   - h u 
   - h u nixpkgs
