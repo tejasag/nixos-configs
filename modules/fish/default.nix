@@ -25,7 +25,7 @@
         set cmd 'nix shell'
         for i in (string split ' ' $argv)
           set pkg (string join '' 'nixpkgs#' $i)
-          set cmd (string join ' ' $cmd $pkgs)
+          set cmd (string join ' ' $cmd $pkg)
         end
         printf %s $cmd
         eval $cmd
