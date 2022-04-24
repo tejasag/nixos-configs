@@ -27,7 +27,7 @@
           set pkg (string join '' 'nixpkgs#' $i)
           set cmd (string join ' ' $cmd $pkgs)
         end
-        eval command $cmd
+        eval $cmd
       ";
     };
     shellInit = ''
