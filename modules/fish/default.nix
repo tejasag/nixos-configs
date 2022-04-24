@@ -27,6 +27,7 @@
           set pkg (string join '' 'nixpkgs#' $i)
           set cmd (string join ' ' $cmd $pkgs)
         end
+        printf %s $cmd
         eval $cmd
       ";
     };
