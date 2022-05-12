@@ -35,7 +35,7 @@ colorscheme gruvbox-material
 let g:airline_theme  = 'gruvbox_material'
 
 autocmd filetype cpp nnoremap <f9> :w <bar> !g++ -std=c++14 % -o %:r <cr>
-autocmd filetype cpp nnoremap <f10> :w <bar> !./% <cr>
+autocmd filetype cpp nnoremap <f10> !./% <cr>
 set relativenumber number
 set tabstop=4
 set shiftwidth=4
