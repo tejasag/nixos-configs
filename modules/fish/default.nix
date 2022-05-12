@@ -34,7 +34,7 @@
       set -x DOOMDIR "~/.dotfiles/config/doom"
       set fish_greeting
       set EDITOR "nvim"
-      ~/.dotfiles/scripts/shell-color/colorscript.sh random
     '';
+      #~/.dotfiles/scripts/shell-color/colorscript.sh random
   };
 }
