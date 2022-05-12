@@ -240,7 +240,7 @@ h_shell_usage() {
 
   fi
 
-  printf "Shortcut: s\n"
+  printf "Shortcut: sh\n"
   echo
 
   printf "Usage:\n"
@@ -510,7 +510,7 @@ parse_requirements() {
     shift $#
     ;;
 
-  shell | s )
+  shell | sh )
     action="shell"
     shift
     h_shell_parse_requirements "$@"

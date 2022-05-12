@@ -56,7 +56,7 @@ commands:
   - h s neovim
 
 - name: shell
-  short: s
+  short: sh
   help: Setup files for an adhoc shell in the directory
   
   args:
