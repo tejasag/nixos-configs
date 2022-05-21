@@ -26,7 +26,7 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-gruvbox t)
+  (load-theme 'doom-nord t)
   (setq doom-gruvbox-dark-variant "soft")
   (setq doom-themes-neotree-file-icons t)
 
