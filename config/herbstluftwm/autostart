@@ -1,7 +1,7 @@
 #!/run/current-system/sw/bin/bash
 
-nitrogen --restore &
-# dunst &
+# wallpaper
+nitrogen --set-scaled --random ~/wallpapers/nord/nord-selected &
 
 ~/.dotfiles/config/herbstluftwm/configs/theme
 ~/.dotfiles/config/herbstluftwm/configs/keybinds
@@ -11,5 +11,5 @@ nitrogen --restore &
 polybar -q main -c "~/.dotfiles/config/polybar/config.ini" &
 
 # Conky
-conky -c ~/.dotfiles/config/conky/gruvbox-dark.conkyrc
+conky -c ~/.dotfiles/config/conky/nord.conkyrc
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Color files
-PFILE="$HOME/.config/polybar/forest/colors.ini"
-RFILE="$HOME/.config/polybar/forest/scripts/rofi/colors.rasi"
+PFILE="$HOME/.dotfiles/config/polybar/colors.ini"
+RFILE="$HOME/.dotfiles/config/polybar/scripts/rofi/colors.rasi"
 
 # Change colors
 change_color() {
@@ -37,9 +37,11 @@ if  [[ $1 = "--default" ]]; then
 	SE="#4DD0E1"
 	change_color
 elif  [[ $1 = "--nord" ]]; then
-	BG="#3B4252"
+	#BG="#2E3440"
+	BG="#ffffff"
 	FG="#E5E9F0"
-	BGA="#454C5C"
+	#BGA="#454C5C"
+	BGA="#ffffff"
 	SEP="#5B6579"
 	AC="#BF616A"
 	SE="#88C0D0"
