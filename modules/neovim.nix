@@ -16,6 +16,7 @@
       vim-polyglot
       vim-airline
       vim-airline-themes
+      vim-parinfer
       coc-nvim
       coc-tabnine
       nord-nvim
