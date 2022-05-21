@@ -16,6 +16,7 @@
       nvim-web-devicons
       vim-polyglot
       vim-airline
+      vim-airline-themes
       coc-nvim
       coc-tabnine
       nord-nvim
@@ -25,7 +26,7 @@
 set termguicolors
 
 colorscheme nord
-let g:airline_theme  = 'nord'
+let g:airline_theme  = 'nord_minimal'
 
 autocmd filetype cpp nnoremap <f9> :w <bar> !g++ -std=c++14 % -o %:r<cr> 
 autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
@@ -140,6 +141,11 @@ set nosplitright
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
+
+lua << EOF
+     require'nvim-tree'.setup {
+     }
+EOF
 '';
   };
 }
