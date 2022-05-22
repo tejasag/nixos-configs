@@ -13,14 +13,14 @@
   home.homeDirectory = "/home/tejasagarwal";
 
   imports = [
-    ../modules/neovim
-    ../modules/fish
-    ../modules/git
-    ../modules/kitty
-    ../modules/starship
-    ../modules/emacs
-    ../modules/direnv
-    ../modules/zoxide
+    ../modules/neovim.nix
+    ../modules/fish.nix
+    ../modules/git.nix
+    ../modules/kitty.nix
+    ../modules/starship.nix
+    ../modules/emacs.nix
+    ../modules/direnv.nix
+    ../modules/zoxide.nix
   ];
 
   home.packages = with pkgs; [
@@ -37,7 +37,6 @@
     killall         # *cough* killall $PERSON_READING *cough*
     ripgrep         # Recursive file searcher
     coreutils       # basic GNU utilities
-    fd              # Faster `find` alternative
     cmake           # Makefile generator
     libtool         # a generic library support script
     gnome.gnome-bluetooth # bluetooth manager for gnome
@@ -65,33 +64,23 @@
     minecraft       # Minecraft. yes.
     obs-studio      # Recording software
     arduino         # arduino.
-    libvterm        # terminal emulator
     vlc             # media player
     imagemagick     # bitmap images editor
     jdk             # java development kit ._.
     virtualbox      # pc emulator
-    protonvpn-gui   # vpn
     bashly          # bashly
 
     # Display
     nitrogen        # wallpaper dameon
     polybar         # system tray
     picom           # compositor
-    dmenu           # application launcher
     rofi            # application launcher
     dunst           # notifcation daemon
+    herbstluftwm    # window manager
+    eww             # widget daemon
 
     # Editors & more
     vim             # terminal editor
-    notepadqq       # gui editor 
     vscode          # Text Editor
-    tmux            # terminal multiplexer 
-
-    # WMs & related
-    herbstluftwm    
-
-    # Hack club
-    # sepia           # Mimimalist functional language (@rishiosaur)
-    aces            # Custom character set encoder (@quackduck)
   ];
 }

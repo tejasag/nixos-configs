@@ -1,0 +1,15 @@
+(defwidget launcher-wid []
+  (box :orientation "h"
+       :space-evenly false
+       :halign "center"
+       :valign "center"
+   "uwu"))
+
+(defwindow launcher
+           :stacking "fg"
+           :focusable false
+           :screen "0"
+           :geometry (geometry :anchor "top left"
+                               :width "100%"
+                               :height "100%")
+  (launcher-wid))

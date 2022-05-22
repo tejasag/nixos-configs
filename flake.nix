@@ -13,17 +13,13 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-dram.url = "github:dramforever/nix-dram";
 
     # ========= overlays ========= #
     hackclub.url = "github:hackclub/nix-overlay";
     nur.url = "github:nix-community/NUR";
-    xmobar.url = "github:tejasag/xmobar";
-    xmonad.url = "github:xmonad/xmonad";
-    xmonad-contrib.url = "github:xmonad/xmonad-contrib";
   };
 
-  outputs = inputs@{nixpkgs, home-manager, nur, hackclub, xmobar, xmonad, xmonad-contrib, ... }:
+  outputs = inputs@{nixpkgs, home-manager, nur, hackclub, ... }:
     let
       system = "x86_64-linux";
 
@@ -34,9 +30,6 @@
         overlays = [
           hackclub.overlay.${system}
           nur.overlay
-          xmobar.overlay
-          xmonad.overlay
-          xmonad-contrib.overlay
           (import ./overlays)
         ];
       };
