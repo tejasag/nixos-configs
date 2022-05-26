@@ -76,11 +76,12 @@
     picom           # compositor
     rofi            # application launcher
     dunst           # notifcation daemon
-    herbstluftwm    # window manager
     eww             # widget daemon
 
     # Editors & more
     vim             # terminal editor
     vscode          # Text Editor
   ];
+
+  xsession.windowManager.awesome.enable = true;
 }
