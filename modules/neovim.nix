@@ -22,6 +22,7 @@
       nord-nvim
       telescope-nvim
       nerdtree
+      yats-vim
     ];
    extraConfig = ''
 set termguicolors
