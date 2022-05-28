@@ -82,6 +82,4 @@
     vim             # terminal editor
     vscode          # Text Editor
   ];
-
-  xsession.windowManager.awesome.enable = true;
 }
