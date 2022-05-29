@@ -11,8 +11,8 @@
     enable = true;
 
     font = {
-      name = "VictorMono Nerd Font";
-      size = 13;
+      name = "Victor Mono Semibold Nerd Font";
+      size = 12;
     };
 
     settings = {

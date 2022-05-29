@@ -14,16 +14,30 @@
       vim-nix
       nvim-web-devicons
       vim-polyglot
-      vim-airline
-      vim-airline-themes
       vim-parinfer
-      coc-nvim
-      coc-tabnine
       nord-nvim
       telescope-nvim
       nerdtree
       yats-vim
+
+      vim-airline
+      vim-airline-themes
+
+      coc-tabnine
+      coc-json
+      coc-git 
+      coc-css
+      coc-eslint
+      coc-html
+      coc-prettier
+      coc-rust-analyzer
+      coc-python
+      coc-svelte
+      coc-tsserver
+      coc-pairs
     ];
+   coc.enable = true;
+      	
    extraConfig = ''
 set termguicolors
 
@@ -46,23 +60,6 @@ highlight Normal guibg=none
 highlight NonText guibg=none
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
-
-let g:coc_global_extensions = [
-      \ 'coc-json',
-      \ 'coc-git',
-      \ 'coc-css',
-      \ 'coc-eslint',
-      \ 'coc-html',
-      \ 'coc-prettier',
-      \ 'coc-rust-analyzer',
-      \ 'coc-python',
-      \ 'coc-svelte',
-      \ 'coc-tailwindcss',
-      \ 'coc-toml',
-      \ 'coc-tsserver',
-      \ 'coc-yank',
-      \ 'coc-pairs',
-      \ 'coc-snippets']
 
 function! NERDTreeToggleInCurDir()
   if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
