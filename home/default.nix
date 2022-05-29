@@ -21,6 +21,7 @@
     ../modules/emacs.nix
     ../modules/direnv.nix
     ../modules/zoxide.nix
+    ../modules/vim.nix
   ];
 
   home.packages = with pkgs; [
@@ -36,9 +37,6 @@
     fish            # <shell><
     killall         # *cough* killall $PERSON_READING *cough*
     ripgrep         # Recursive file searcher
-    coreutils       # basic GNU utilities
-    cmake           # Makefile generator
-    libtool         # a generic library support script
     gnome.gnome-bluetooth # bluetooth manager for gnome
     pavucontrol     # audio controller
     bat             # cat replacement 
@@ -59,17 +57,14 @@
     gnome.cheese    # Camera app
     insomnia        # REST Client
     discord         # Chat app
-    clang           # I am C-peed xD 
-    clang-tools     # tools.
     minecraft       # Minecraft. yes.
     obs-studio      # Recording software
     arduino         # arduino.
     vlc             # media player
     imagemagick     # bitmap images editor
-    jdk             # java development kit ._.
     virtualbox      # pc emulator
     bashly          # bashly
-    fontforge
+    vscode          # Text Editor
 
     # Display
     nitrogen        # wallpaper dameon
@@ -78,9 +73,5 @@
     rofi            # application launcher
     dunst           # notifcation daemon
     eww             # widget daemon
-
-    # Editors & more
-    vim             # terminal editor
-    vscode          # Text Editor
   ];
 }

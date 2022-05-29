@@ -18,7 +18,6 @@
       clone = "git clone git@github.com/$1/$2.git";
     };
     functions = {
-      fish_user_key_bindings.body = "fish_vi_key_bindings";
       nix.body = "IN_NIX_SHELL=impure name=shell command nix $argv";
       pkgs.body = "
         set cmd 'nix shell'
@@ -33,7 +32,7 @@
       set -x DIRENV_LOG_FORMAT ""
       set -x DOOMDIR "~/.dotfiles/config/doom"
       set fish_greeting
-      set EDITOR "nvim"
+      set EDITOR "vim"
     '';
       #~/.dotfiles/scripts/shell-color/colorscript.sh random
   };

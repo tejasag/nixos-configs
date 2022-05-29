@@ -1,9 +1,3 @@
-#   ______  ______    
-#  /\__  _\/\  __ \     
-#  \/_/\ \/\ \  __ \    By Tejas Agarwal 
-#     \ \_\ \ \_\ \_\   https://github.com/tejasag 
-#      \/_/  \/_/\/_/ 
-#      
 { pkgs, ... }:
 
 {
@@ -69,7 +63,7 @@ set relativenumber number
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set guicursor=n-v-c-i:blinkon0
+set guicursor=n-v-c-i:block-blinkon0
 highlight Normal guibg=none
 highlight NonText guibg=none
 highlight Normal ctermbg=none
