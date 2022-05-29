@@ -11,7 +11,7 @@
     enable = true;
 
     font = {
-      name = "Portland Mono";
+      name = "VictorMono Nerd Font";
       size = 13;
     };
 

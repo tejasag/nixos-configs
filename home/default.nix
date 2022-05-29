@@ -69,6 +69,7 @@
     jdk             # java development kit ._.
     virtualbox      # pc emulator
     bashly          # bashly
+    fontforge
 
     # Display
     nitrogen        # wallpaper dameon
