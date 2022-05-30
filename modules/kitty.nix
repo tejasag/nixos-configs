@@ -1,9 +1,3 @@
-#   ______  ______    
-#  /\__  _\/\  __ \     
-#  \/_/\ \/\ \  __ \    By Tejas Agarwal 
-#     \ \_\ \ \_\ \_\   https://github.com/tejasag 
-#      \/_/  \/_/\/_/ 
-#      
 { ... }:
 
 {
@@ -11,8 +5,8 @@
     enable = true;
 
     font = {
-      name = "Victor Mono Semibold Nerd Font";
-      size = 11;
+      name = "Victor Mono Semibold Nerd Font Complete";
+      size = 12;
     };
 
     settings = {
