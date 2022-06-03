@@ -58,6 +58,7 @@
     virtualbox      # pc emulator
     bashly          # bashly
     vscode          # Text Editor
+    thunderbird     # Email client
 
     # Display
     nitrogen        # wallpaper dameon

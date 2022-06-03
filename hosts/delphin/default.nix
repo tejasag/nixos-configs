@@ -49,17 +49,17 @@
   };
 
   fonts = {
-      fontconfig = {
-        enable = true;
-        defaultFonts = {
-          monospace = [ "Victor Mono Nerd Font Semibold" ];
-        };
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = [ "Victor Mono Semibold Nerd Font Complete" ];
       };
-      fonts = with pkgs; [
-	victor-mono
-        (nerdfonts.override { fonts = [ "VictorMono" ]; })
-      ];
     };
+    fonts = with pkgs; [
+      victor-mono
+      (nerdfonts.override { fonts = [ "VictorMono" "Iosevka" ]; })
+    ];
+  };
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
