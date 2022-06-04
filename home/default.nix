@@ -6,12 +6,12 @@
   home.homeDirectory = "/home/tejasagarwal";
 
   imports = [
-    ../modules/neovim.nix
+#    ../modules/neovim.nix
     ../modules/fish.nix
     ../modules/git.nix
     ../modules/kitty.nix
     ../modules/starship.nix
-    ../modules/emacs.nix
+#    ../modules/emacs.nix
     ../modules/direnv.nix
     ../modules/zoxide.nix
     ../modules/vim.nix
@@ -62,7 +62,7 @@
 
     # Display
     nitrogen        # wallpaper dameon
-    polybar         # system tray
+    polybar         # bar 
     picom           # compositor
     rofi            # application launcher
     dunst           # notifcation daemon
