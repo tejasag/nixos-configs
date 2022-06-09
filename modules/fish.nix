@@ -21,7 +21,17 @@
         end
         eval $cmd
       ";
+      pkgs-unfree.body = "
+        set cmd 'NIXPKGS_ALLOW_UNFREE=1 nix shell'
+        for i in (string split ' ' $argv)
+          set pkg (string join '' 'nixpkgs#' $i)
+          set cmd (string join ' ' $cmd $pkg)
+        end
+        set cmd (string join ' '  $cmd '--impure')
+        eval $cmd
+      ";
     };
+
     shellInit = ''
       set -x DIRENV_LOG_FORMAT ""
       set -x DOOMDIR "~/.dotfiles/config/doom"

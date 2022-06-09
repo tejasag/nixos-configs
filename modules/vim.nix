@@ -8,7 +8,9 @@
             shiftwidth = 4;
             tabstop = 4;
         };
-        plugins = [];
+        plugins = with pkgs.vimPlugins; [
+            vim-prettier
+        ];
         extraConfig = ''
             set noeb vb t_vb=
        '';

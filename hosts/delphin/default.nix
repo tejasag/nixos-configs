@@ -66,6 +66,9 @@
 
   time.timeZone = "Asia/Kolkata";
 
+  # enable fish for completions
+  programs.fish.enable = true;
+
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
