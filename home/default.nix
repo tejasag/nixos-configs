@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-2205, ... }:
+{ config, pkgs, master, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -17,7 +17,7 @@
     ../modules/vim.nix
   ];
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     h               # hydrogen.
 
     arduino
@@ -32,7 +32,6 @@
     # wait for discord to update on nixos-unstable
     # discord
     dunst
-    eww
     firefox
     fish
     flameshot
@@ -71,7 +70,10 @@
     wirelesstools
     yarn
     zoom-us
-  ] ++ [
+    
     nodePackages.prettier
-  ];
+  ]) ++ (with master; [ 
+    discord
+    eww
+  ]);
 }

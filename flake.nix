@@ -2,7 +2,9 @@
   description = "tejasag's nixos-configs";
 
   inputs = {
+    master.url = "github:nixos/nixpkgs/master";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +15,7 @@
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs@{nixpkgs, home-manager, nur, hackclub, ... }:
+  outputs = inputs@{nixpkgs, master, home-manager, nur, hackclub, ... }:
     let
       system = "x86_64-linux";
 
@@ -28,6 +30,11 @@
         ];
       };
 
+      pkgs-master = import master {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
       lib = nixpkgs.lib;
     in {
       devShell.${system} = import ./shell.nix { inherit pkgs; };
@@ -38,6 +45,9 @@
           username = "tejasagarwal";
           homeDirectory = "/home/tejasagarwal";
           stateVersion = "21.05";
+          extraSpecialArgs = {
+            master = pkgs-master;
+          };
           configuration.imports = [ ./home ];
         };
 
