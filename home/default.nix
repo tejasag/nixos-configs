@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-2205, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -29,7 +29,8 @@
     brave
     cargo
     conky
-    discord
+    # wait for discord to update on nixos-unstable
+    # discord
     dunst
     eww
     firefox
@@ -55,7 +56,7 @@
     pavucontrol
     picom
     pinentry
-    polybar
+    polybarFull
     python3
     ranger
     ripgrep
