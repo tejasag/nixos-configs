@@ -72,8 +72,8 @@
     
     nodePackages.prettier
   ]) ++ (with master; [
-    (callPackage ../pkgs/discord-canary { unwraped = master.discord-canary; })
-    #discord-canary
+    #(callPackage ../pkgs/discord-canary { unwrapped = master.discord-canary; })
+    discord-canary
     eww
   ]);
 }

@@ -3,7 +3,7 @@
 }:
 
 writeShellScriptBin "discord" ''
-confdir="~/.dotfiles/pkgs/discord/"
+confdir="~/.dotfiles/pkgs/discord-canary"
 preloadFile="$confdir/preload.js"
 cssFile="$confdir/custom.css"
 mkdir -p "$confdir"
@@ -46,16 +46,15 @@ if [ "$(uname)" = "Darwin" ]; then
   core_asar="$(echo "$HOME/Library/Application Support/discord/"*"/modules/discord_desktop_core/core.asar")"
 else
   sed_options='-i'
-  core_asar="$(echo "~/.config/discord/${unwrapped.version}/modules/discord_desktop_core/core.asar")"
+  core_asar="$(echo "$HOME/.config/discordcanary/${unwrapped.version}/modules/discord_desktop_core/core.asar")"
 fi
 
-app_preload_replace='s|  // App preload script, used to provide a replacement native API now that|try {require\(`/tmp/discocss-preload.js`)()} catch \(e\) {console.error\(e\);} |'
-launch_main_app_replace='s|// launch main app window; could be called multiple times for various reasons| const dp = require(`/tmp/discocss-preload.js`);                             |'
+app_preload_replace='s|  // App preload script, used to provide a replacement native API now that|try {require\(`~/.dotfiles/pkgs/discord-canary/preload.js`)()} catch \(e\) {console.error\(e\);} |'
+launch_main_app_replace='s|// launch main app window; could be called multiple times for various reasons| const dp = require(`~/.dotfiles/pkgs/discord-canary/preload.js`);                             |'
 frame_true_replace='s|    mainWindowOptions.frame = true;|}dp.mo(mainWindowOptions);{        |'
 causing_the_window_replace='s|// causing the window to be too small on a larger secondary display| dp.mw(mainWindow);                                                |'
 LC_ALL=C sed $sed_options "$app_preload_replace; $launch_main_app_replace; $frame_true_replace; $causing_the_window_replace" \
   "$core_asar"
 
-command -v discord && exec ${unwrapped}/bin/discord 
-command -v Discord && exec ${unwrapped}/bin/Discord 
-  ''
+command -v discord && exec ${unwrapped}/bin/discordcanary
+''
