@@ -10,6 +10,7 @@
       gp = "git push origin $1";
       commit = "ga . && gc $1";
       clone = "git clone git@github.com/$1/$2.git";
+      s="kitty +kitten ssh";
     };
     functions = {
       nix.body = "IN_NIX_SHELL=impure name=shell command nix $argv";
