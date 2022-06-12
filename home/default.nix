@@ -28,6 +28,7 @@
     cargo
     conky
     dunst
+    eww
     firefox
     fish
     flameshot
@@ -70,8 +71,6 @@
     
     nodePackages.prettier
   ]) ++ (with master; [
-    #(callPackage ../pkgs/discord-canary { unwrapped = master.discord-canary; })
     discord-canary
-    eww
   ]);
 }
