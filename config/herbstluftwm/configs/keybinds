@@ -88,5 +88,5 @@ hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
 # Apps
-hc keybind $Mod-d spawn ~/.dotfiles/config/polybar/scripts/launcher.sh
+hc keybind $Mod-d spawn rofi -no-config -no-lazy-grab -show run -modi drun -theme ~/.dotfiles/config/rofi/themes/dmenu.rasi
 hc keybind $Mod-Ctrl-Print spawn flameshot gui

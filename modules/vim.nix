@@ -12,7 +12,7 @@
             vim-prettier
         ];
         extraConfig = ''
-            set noeb vb t_vb=
+        set noeb vb t_vb=
        '';
     };
 }

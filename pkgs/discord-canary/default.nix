@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ writeShellScriptBin
+, unwrapped 
+}:
 
-let 
-  wrapped = pkgs.writeShellScriptBin "discord" ''
+writeShellScriptBin "discord" ''
 confdir="~/.dotfiles/pkgs/discord/"
 preloadFile="$confdir/preload.js"
 cssFile="$confdir/custom.css"
@@ -45,7 +46,7 @@ if [ "$(uname)" = "Darwin" ]; then
   core_asar="$(echo "$HOME/Library/Application Support/discord/"*"/modules/discord_desktop_core/core.asar")"
 else
   sed_options='-i'
-  core_asar="$(echo "$XDG_CONFIG_HOME/discord/"*"/modules/discord_desktop_core/core.asar")"
+  core_asar="$(echo "~/.config/discord/${unwrapped.version}/modules/discord_desktop_core/core.asar")"
 fi
 
 app_preload_replace='s|  // App preload script, used to provide a replacement native API now that|try {require\(`/tmp/discocss-preload.js`)()} catch \(e\) {console.error\(e\);} |'
@@ -55,14 +56,6 @@ causing_the_window_replace='s|// causing the window to be too small on a larger 
 LC_ALL=C sed $sed_options "$app_preload_replace; $launch_main_app_replace; $frame_true_replace; $causing_the_window_replace" \
   "$core_asar"
 
-command -v discord && exec ${pkgs.discord}/bin/discord 
-command -v Discord && exec ${pkgs.discord}/bin/Discord 
+command -v discord && exec ${unwrapped}/bin/discord 
+command -v Discord && exec ${unwrapped}/bin/Discord 
   ''
-in
-  pkgs.symlinkJoin {
-    name = "discord";
-    paths = [
-      wrapped
-      pkgs.discord
-    ];
-  }

@@ -1,0 +1,8 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "VictorMono SemiBold 10";
+ combi-modi: "window,drun,ssh";
+}
+
+@theme "~/.dotfiles/config/rofi/themes/dmenu.rasi"
+

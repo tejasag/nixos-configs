@@ -1,0 +1,62 @@
+* {
+    background-color:           #24273A;
+    border-color:               #24273A;
+    text-color:                 #CAD3F5;
+    height:                     27px;
+    font:                       "VictorMono SemiBold 10";
+    prompt-font:                "VictorMono SemiBold 10";
+    prompt-background:          #F5BDE6;
+    prompt-foreground:          #181926;
+    prompt-padding:             5px;
+    selected-normal-background: #C6A0F6;
+    selected-normal-foreground: #181926;
+}
+
+#window {
+    anchor: north;
+    location: north;
+    width: 100%;
+    padding: 0px;
+    children: [ horibox ];
+}
+
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+
+#prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+}
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+#entry {
+    padding: 5px;
+    expand: false;
+    width: 10em;
+}
+#element {
+    padding: 4px 8px;
+}
+#element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+/* Not actually relevant for this configuration, but it might
+be useful to someone having issues with their icons' background color
+
+element-icon {
+    background-color: inherit;
+}
+*/

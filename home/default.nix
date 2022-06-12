@@ -29,13 +29,12 @@
     brave
     cargo
     conky
-    # wait for discord to update on nixos-unstable
-    # discord
     dunst
     firefox
     fish
     flameshot
     git
+    gimp
     gnome.cheese
     gnome.gnome-bluetooth
     gnupg
@@ -72,8 +71,9 @@
     zoom-us
     
     nodePackages.prettier
-  ]) ++ (with master; [ 
-    discord
+  ]) ++ (with master; [
+    (callPackage ../pkgs/discord-canary { unwraped = master.discord-canary; })
+    #discord-canary
     eww
   ]);
 }
