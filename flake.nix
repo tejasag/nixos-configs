@@ -15,8 +15,11 @@
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs@{nixpkgs, master, home-manager, nur, hackclub, ... }:
+  outputs = { self, nixpkgs, master, home-manager, nur, hackclub, ... }@inputs:
     let
+      inherit (home-manager.lib) homeManagerConfiguration;
+      inherit (nixpkgs.lib) nixosSystem;
+
       system = "x86_64-linux";
 
       pkgs = import nixpkgs {
@@ -35,15 +38,15 @@
         config.allowUnfree = true;
       };
 
-      lib = nixpkgs.lib;
+      username = "tejasagarwal";
+      homeDirectory = "/home" + "${username}";
+
     in {
       devShell.${system} = import ./shell.nix { inherit pkgs; };
 
-      homeManagerConfigurations = {
-        tejasagarwal = home-manager.lib.homeManagerConfiguration {
-          inherit system pkgs;
-          username = "tejasagarwal";
-          homeDirectory = "/home/tejasagarwal";
+      hmConfigs = {
+        main = homeManagerConfiguration {
+          inherit system pkgs username homeDirectory;
           stateVersion = "21.05";
           extraSpecialArgs = {
             master = pkgs-master;
@@ -51,28 +54,27 @@
           configuration.imports = [ ./home ];
         };
 
-        minimal = home-manager.lib.homeManagerConfiguration {
-         inherit system pkgs;
-          username = "tejasagarwal";
-          homeDirectory = "/home/tejasagarwal";
+        minimal = homeManagerConfiguration {
+         inherit system pkgs username homeDirectory;
           stateVersion = "21.05";
           configuration.imports = [ ./home/minimal.nix ]; 
         };
       };
 
-      nixosConfigurations = {
-        delphin = lib.nixosSystem {
-          inherit system pkgs;
-          modules = [ 
-            ./hosts/delphin
-            {
-              nix = {
-                registry.nixpkgs.flake = inputs.nixpkgs;
-                nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-              };
-            }
-          ];
-        };
+      main = self.hmConfigs.main.activationPackage;
+      minimal = self.hmConfigs.minimal.activationPackage;
+
+      nixosConfigurations.delphin = nixosSystem {
+        inherit system pkgs;
+        modules = [ 
+          ./hosts/delphin
+          {
+            nix = {
+              registry.nixpkgs.flake = inputs.nixpkgs;
+              nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+            };
+          }
+        ];
       };
     };
 }

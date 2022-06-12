@@ -2,8 +2,6 @@
 
 {
   programs.home-manager.enable = true;
-  home.username = "tejasagarwal";
-  home.homeDirectory = "/home/tejasagarwal";
 
   imports = [
     ../modules/git.nix

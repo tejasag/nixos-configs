@@ -14,6 +14,7 @@
         ];
         extraConfig = ''
         set noeb vb t_vb=
+        let g:netrw_localrmdir='rm -r'
        '';
     };
 }

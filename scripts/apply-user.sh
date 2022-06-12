@@ -2,9 +2,9 @@
 pushd ~/.dotfiles/
 
 if [[ $1 == "minimal" ]] ; then
-    nix build .#homeManagerConfigurations.minimal.activationPackage
+    nix build .#minimal
 else
-    nix build .#homeManagerConfigurations.tejasagarwal.activationPackage
+    nix build .#main
 fi
 
 ./result/activate
