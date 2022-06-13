@@ -39,7 +39,7 @@
       };
 
       username = "tejasagarwal";
-      homeDirectory = "/home" + "${username}";
+      homeDirectory = "/home/" + "${username}";
 
     in {
       devShell.${system} = import ./shell.nix { inherit pkgs; };
@@ -54,8 +54,16 @@
           configuration.imports = [ ./home ];
         };
 
+        tilde = homeManagerConfiguration {
+          inherit system pkgs;
+          username = "tej";
+          homeDirectory = "/home/tej";
+          stateVersion = "21.05";
+          configuration.imports = [ ./home/tilde.nix ];
+        };
+
         minimal = homeManagerConfiguration {
-         inherit system pkgs username homeDirectory;
+          inherit system pkgs username homeDirectory;
           stateVersion = "21.05";
           configuration.imports = [ ./home/minimal.nix ]; 
         };
@@ -63,6 +71,7 @@
 
       main = self.hmConfigs.main.activationPackage;
       minimal = self.hmConfigs.minimal.activationPackage;
+      tilde = self.hmConfigs.tilde.activationPackage;
 
       nixosConfigurations.delphin = nixosSystem {
         inherit system pkgs;
