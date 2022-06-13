@@ -27,6 +27,7 @@
     brave
     cargo
     conky
+    deno
     dunst
     eww
     firefox

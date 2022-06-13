@@ -16,6 +16,7 @@
 
       window_padding_width = 5;
       
+      dynamic_background_opacity = "yes";
       foreground = "#CAD3F5";
       background = "#24273A";
       selection_foreground = "#24273A";
