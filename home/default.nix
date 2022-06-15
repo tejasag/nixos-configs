@@ -9,7 +9,7 @@
     ../modules/git.nix
     ../modules/kitty.nix
     ../modules/starship.nix
-#    ../modules/emacs.nix
+    ../modules/emacs.nix
     ../modules/direnv.nix
     ../modules/zoxide.nix
     ../modules/vim.nix
@@ -33,6 +33,7 @@
     firefox
     fish
     flameshot
+    gcc
     git
     gimp
     gnome.cheese
@@ -70,6 +71,7 @@
     yarn
     zoom-us
     
+    nodePackages.pnpm
     nodePackages.prettier
   ]) ++ (with master; [
     discord-canary
