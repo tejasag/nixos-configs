@@ -33,45 +33,12 @@
         ];
       };
 
-      pkgs-master = import master {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
-      username = "tejasagarwal";
-      homeDirectory = "/home/" + "${username}";
-
     in {
+      lib = import ./lib inputs;
+
       devShell.${system} = import ./shell.nix { inherit pkgs; };
 
-      hmConfigs = {
-        main = homeManagerConfiguration {
-          inherit system pkgs username homeDirectory;
-          stateVersion = "21.05";
-          extraSpecialArgs = {
-            master = pkgs-master;
-          };
-          configuration.imports = [ ./home ];
-        };
-
-        tilde = homeManagerConfiguration {
-          inherit system pkgs;
-          username = "tej";
-          homeDirectory = "/home/tej";
-          stateVersion = "21.05";
-          configuration.imports = [ ./home/tilde.nix ];
-        };
-
-        minimal = homeManagerConfiguration {
-          inherit system pkgs username homeDirectory;
-          stateVersion = "21.05";
-          configuration.imports = [ ./home/minimal.nix ]; 
-        };
-      };
-
-      main = self.hmConfigs.main.activationPackage;
-      minimal = self.hmConfigs.minimal.activationPackage;
-      tilde = self.hmConfigs.tilde.activationPackage;
+      homeConfigurations = import ./home inputs;
 
       nixosConfigurations.delphin = nixosSystem {
         inherit system pkgs;
