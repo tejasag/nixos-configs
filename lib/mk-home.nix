@@ -12,9 +12,12 @@ in
     inherit username system;
     homeDirectory = "/home/${username}";
 
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
 
-    extraSpecialArgs.master = master.legacyPackages.${system};
+#    extraSpecialArgs.master = master.legacyPackages.${system};
     configuration.imports = [ entrypoint ];
   }
  

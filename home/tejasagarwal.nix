@@ -1,5 +1,11 @@
-{ self, ... }: { config, pkgs, master, ... }:
+{ self, master, ... }: { config, pkgs, ... }:
 
+let
+  mpkgs = import master {
+    system = "x86_64-linux";
+    config.allowUnfree = true;
+  };
+in
 {
   programs.home-manager.enable = true;
 
@@ -70,7 +76,7 @@
     
     nodePackages.pnpm
     nodePackages.prettier
-  ]) ++ (with master; [
+  ]) ++ (with mpkgs; [
     discord-canary
   ]) ++ (with self.packages.x86_64-linux; [
     bashly
