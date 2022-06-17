@@ -9,39 +9,23 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # ========= overlays ========= #
-    hackclub.url = "github:hackclub/nix-overlay";
-    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { self, nixpkgs, master, home-manager, nur, hackclub, ... }@inputs:
+  outputs = { self, nixpkgs, master, home-manager, ... }@inputs:
     let
-      inherit (home-manager.lib) homeManagerConfiguration;
       inherit (nixpkgs.lib) nixosSystem;
 
       system = "x86_64-linux";
-
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        
-        overlays = [
-          hackclub.overlay.${system}
-          nur.overlay
-          (import ./overlays)
-        ];
-      };
-
     in {
       lib = import ./lib inputs;
 
-      devShell.${system} = import ./shell.nix { inherit pkgs; };
-
       homeConfigurations = import ./home inputs;
 
+      packages.x86_64-linux = import ./packages inputs;
+
       nixosConfigurations.delphin = nixosSystem {
-        inherit system pkgs;
+        inherit system;
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [ 
           ./hosts/delphin
           {

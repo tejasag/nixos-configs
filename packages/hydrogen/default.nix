@@ -1,8 +1,10 @@
 {
   pkgs,
+  writeShellScriptBin,
+
   pname ? "hydrogen",
 }:
 
-pkgs.writeShellScriptBin pname ''
+writeShellScriptBin pname ''
   ~/.dotfiles/hydrogen/h $@
 ''

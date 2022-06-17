@@ -1,4 +1,4 @@
-{ config, pkgs, master, ... }:
+{ self, ... }: { config, pkgs, master, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -16,10 +16,7 @@
   ];
 
   home.packages = (with pkgs; [
-    h               # hydrogen.
-
     arduino
-    bashly
     bat
     binutils
     blender
@@ -75,5 +72,8 @@
     nodePackages.prettier
   ]) ++ (with master; [
     discord-canary
+  ]) ++ (with self.packages.x86_64-linux; [
+    bashly
+    h
   ]);
 }
