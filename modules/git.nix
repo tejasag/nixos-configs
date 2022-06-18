@@ -16,5 +16,6 @@
        defaultBranch = "main";
       };
     };
+    ignores = [ "*~" "*.swp" ];
   };
 }
