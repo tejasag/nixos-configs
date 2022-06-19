@@ -6,7 +6,7 @@
 } @ inputs: username: system: nixpkgs: 
 
 let
-  entrypoint = import "${self}/home/${username}.nix" inputs;
+  entrypoint = import "${self}/home/${username}" inputs;
 in
   home-manager.lib.homeManagerConfiguration {
     inherit username system;
