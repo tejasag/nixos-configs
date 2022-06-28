@@ -48,7 +48,9 @@
         "wget",
         "wirelesstools",
         "yarn",
-        "zoom-us"
+        "zoom-us",
+        "nodePackages.pnpm",
+        "nodePackages.prettier"
     ],
     "master": ["discord-canary"],
     "self": ["bashly", "h"]

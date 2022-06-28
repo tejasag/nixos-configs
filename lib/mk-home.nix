@@ -7,18 +7,23 @@
 
 let
   entrypoint = import "${self}/home/${username}" inputs;
+  homeDirectory = "/home/${username}";
 in
   home-manager.lib.homeManagerConfiguration {
-    inherit username system;
-    homeDirectory = "/home/${username}";
-
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
 
-#    extraSpecialArgs.master = master.legacyPackages.${system};
-    configuration.imports = [ entrypoint ];
+    modules = [
+      entrypoint
+      {
+        home = {
+          inherit username homeDirectory;
+          stateVersion = "22.11";
+        };
+      }
+    ];
   }
  
 

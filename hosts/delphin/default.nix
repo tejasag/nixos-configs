@@ -57,7 +57,7 @@
     };
     fonts = with pkgs; [
       victor-mono
-      (nerdfonts.override { fonts = [ "VictorMono" "Iosevka" ]; })
+      (nerdfonts.override { fonts = [ "VictorMono" "FantasqueSansMono" ]; })
     ];
   };
 

@@ -5,9 +5,6 @@ let
     system = "x86_64-linux";
     config.allowUnfree = true;
   };
-
-  getPkgs = file: name: pkg:
-    pkgs.lib.attrValues (pkgs.lib.getAttrs (builtins.fromJSON (builtins.readFile file)).${name} pkg);
 in
 {
   programs.home-manager.enable = true;
@@ -24,11 +21,7 @@ in
     ../../modules/vim.nix
   ];
 
-  home.packages = getPkgs ./pkgs.json "pkgs" pkgs 
-  ++ getPkgs ./pkgs.json "master" mpkgs 
-  ++ getPkgs ./pkgs.json "self" self.packages.x86_64-linux
-  ++ (with pkgs; [
-    nodePackages.pnpm
-    nodePackages.prettier
-  ]);
+  home.packages = self.lib.getPkgs "pkgs" pkgs 
+  ++ self.lib.getPkgs "master" mpkgs 
+  ++ self.lib.getPkgs "self" self.packages.x86_64-linux;
 }
