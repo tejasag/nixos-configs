@@ -50,7 +50,8 @@
         "yarn",
         "zoom-us",
         "nodePackages.pnpm",
-        "nodePackages.prettier"
+        "nodePackages.prettier",
+        "libsForQt5.dolphin"
     ],
     "master": ["discord-canary"],
     "self": ["bashly", "h"]

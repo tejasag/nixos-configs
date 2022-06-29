@@ -19,9 +19,10 @@ in
     ../../modules/direnv.nix
     ../../modules/zoxide.nix
     ../../modules/vim.nix
+    ../../modules/picom.nix
   ];
 
-  home.packages = self.lib.getPkgs "pkgs" pkgs 
-  ++ self.lib.getPkgs "master" mpkgs 
-  ++ self.lib.getPkgs "self" self.packages.x86_64-linux;
+  home.packages = self.lib.getPkgs "pkgs" pkgs ./pkgs.json
+  ++ self.lib.getPkgs "master" mpkgs ./pkgs.json
+  ++ self.lib.getPkgs "self" self.packages.x86_64-linux ./pkgs.json;
 }

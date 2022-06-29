@@ -21,5 +21,5 @@ polybar -c ~/.dotfiles/config/polybar/polybar.ini main
 
 
 # ==============Conky=============================================
-conky -c ~/.dotfiles/config/conky/catppuccin.conkyrc
+# conky -c ~/.dotfiles/config/conky/catppuccin.conkyrc
 
