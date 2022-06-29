@@ -1,11 +1,8 @@
 #!/bin/sh
 pushd ~/.dotfiles/
-
 if [[ $1 == "minimal" ]] ; then
-    nix build .#minimal
+   home-manager switch --flake .#minimal
 else
-    nix build .#main
+   home-manager switch --flake .#tejasagarwal
 fi
-
-./result/activate
 popd
