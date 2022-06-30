@@ -21,7 +21,8 @@
 
       homeConfigurations = import ./home inputs;
 
-      packages.x86_64-linux = import ./packages inputs;
+      packages.${system} = import ./packages inputs;
+      defaultApp.${system} = self.packages.${system}.h;
 
       nixosConfigurations.delphin = nixosSystem {
         inherit system;

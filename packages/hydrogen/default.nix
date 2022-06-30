@@ -1,10 +1,18 @@
 {
   pkgs,
-  writeShellScriptBin,
+  stdenv,
 
-  pname ? "hydrogen",
+  name ? "hydrogen",
 }:
 
-writeShellScriptBin pname ''
-  ~/.dotfiles/hydrogen/h $@
-''
+stdenv.mkDerivation {
+  inherit name;
+  src = ../../bin/h.lua;
+  buildInputs = with pkgs; [ lua5_4 ];
+  phases = "installPhase";
+  installPhase = ''
+    mkdir -p $out $out/bin
+    cp -fv $src $out/bin/${name}
+  '';
+}
+

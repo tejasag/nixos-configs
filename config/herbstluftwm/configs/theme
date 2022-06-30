@@ -23,7 +23,7 @@ hc attr theme.normal.color '#24273A'
 hc attr theme.urgent.color #ac8a8c
 hc attr theme.border_width 3
 hc attr theme.floating.border_width 0
-hc attr theme.floating.padding_top 10
+# hc attr theme.floating.padding_top 10
 hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color "#24273A"
 hc attr theme.active.inner_color '#24273A'
