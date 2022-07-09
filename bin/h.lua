@@ -55,14 +55,14 @@ Created by Tejas Agarwal (https://github.com/tejasag) ]])
   -------- Rebuild command ------
   elseif cmd == "rebuild" or cmd == "re" then
     if args.flags[1] == "h" then
-      echo("home-manager switch --flake .#" .. (args.args[2] or "$(echo $USER)"))
+      nix("home-manager switch --flake .#" .. (args.args[2] or "$(echo $USER)"))
     else
-      echo("nixos-rebuild switch --flake .#" .. (args.args[2] or "$(hostname)"))
+      nix("nixos-rebuild switch --flake .#" .. (args.args[2] or "$(hostname)"))
     end
 
   -------- Test command -------
   elseif cmd == "test" then
-    echo("nixos-rebuild test --flake .#" .. (args.args[2] or "$(hostname)"))
+    nix("nixos-rebuild test --flake .#" .. (args.args[2] or "$(hostname)"))
 
   -- If no command was passed
   else

@@ -4,12 +4,12 @@
   services.picom = {
     enable = true;
     shadow = true;
-    shadowOffsets = [ (-27) (-27) ];
-    shadowOpacity = "0.3";
+    shadowOffsets = [ 1 1 ];
+    shadowOpacity = "0.2";
     # fade = true;
     # fadeDelta = 3;
     extraOptions = ''
-corner-radius = 8;
+corner-radius = 10;
 
 rounded-corners-exclude = [
     "name               *= 'dmenu'",

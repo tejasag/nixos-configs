@@ -90,3 +90,4 @@ hc mousebind $Mod-Button3 resize
 # Apps
 hc keybind $Mod-d spawn rofi -no-config -no-lazy-grab -show run -modi drun -theme ~/.dotfiles/config/rofi/themes/dmenu.rasi
 hc keybind $Mod-Ctrl-Print spawn flameshot gui
+hc keybind $Mod-e spawn emacsclient -c

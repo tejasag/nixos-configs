@@ -43,9 +43,9 @@
   };
 
   users.users.tejasagarwal = {
-	isNormalUser = true;
-	extraGroups = [ "wheel" ];
-	shell = pkgs.fish;
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    shell = pkgs.fish;
   };
 
   fonts = {
